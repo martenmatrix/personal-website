@@ -1,9 +1,5 @@
-function LinkDesign({ route }) {
-    
-}
-
 function AboutMe() {
-    return null;
+    return null; //TODO stack overflow link
 }
 
 export default AboutMe;
