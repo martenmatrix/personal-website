@@ -24,6 +24,12 @@
     position: relative;
 }
 
+.links img {
+    position: absolute;
+    top: -0.25em;
+    right: -1em;
+}
+
 .links a:hover::after { /*TODO ad animation fade from left to right when hovering (black or yellow)*/
     content: "";
     display: block;
