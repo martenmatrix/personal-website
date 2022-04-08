@@ -3,6 +3,10 @@
 .homepage {
     height: 100vh;
     width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .links {
@@ -20,7 +24,7 @@
     position: relative;
 }
 
-.links a:hover::after {
+.links a:hover::after { /*TODO ad animation fade from left to right when hovering (black or yellow)*/
     content: "";
     display: block;
 
