@@ -3,6 +3,7 @@ import { Route, Routes, useParams } from 'react-router-dom';
 import projects from '../data/projects';
 import ReactMarkdown from 'react-markdown';
 import makeEmojisAccessible from '@fec/remark-a11y-emoji'
+import parseGitHubEmojis from 'remark-gemoji';
 import '../styles/github-markdown-light.css';
 
 function ProjectOverview() {
@@ -40,7 +41,7 @@ function ProjectOverview() {
 
     return (
         <div className="project-overview">
-            <ReactMarkdown className="markdown-body" remarkPlugins={[makeEmojisAccessible]}>{readMe}</ReactMarkdown>
+            <ReactMarkdown className="markdown-body" remarkPlugins={[makeEmojisAccessible, parseGitHubEmojis]}>{readMe}</ReactMarkdown>
         </div>
     )
 }
