@@ -50,24 +50,20 @@
     animation-fill-mode: forwards;
 }
 
-@keyframes extend-width {
-    0% {
-        width: 0;
-    } 100% {
-        width: 100%;
-    }
-}
-
-.links a:hover::after { /*TODO ad animation fade from left to right when hovering (black or yellow)*/
+.links a::after {
     content: "";
     display: block;
-    animation: extend-width 200ms;
-    animation-fill-mode: forwards;
 
     position: absolute;
     bottom: 0;
+    width: 0;
     height: 50%;
     background: black;
     opacity: 20%;
+    transition: width 200ms;
+}
+
+.links a:hover::after {
+    width: 100%;
 }
 
