@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Route, Routes, useParams } from 'react-router-dom';
 import projects from '../data/projects';
 import ReactMarkdown from 'react-markdown';
+import '../styles/github-markdown-light.css';
 
 function ProjectOverview() {
     const params = useParams();
@@ -38,7 +39,7 @@ function ProjectOverview() {
 
     return (
         <div className="project-overview">
-            <ReactMarkdown>{readMe}</ReactMarkdown>
+            <ReactMarkdown className="markdown-body">{readMe}</ReactMarkdown>
         </div>
     )
 }
