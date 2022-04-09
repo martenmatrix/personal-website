@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Route, Routes, useParams } from 'react-router-dom';
 import projects from '../data/projects';
+import ReactMarkdown from 'react-markdown';
 
 function ProjectOverview() {
     const params = useParams();
@@ -37,7 +38,7 @@ function ProjectOverview() {
 
     return (
         <div className="project-overview">
-            <pre>{JSON.stringify(readMe)}</pre>
+            <ReactMarkdown>{readMe}</ReactMarkdown>
         </div>
     )
 }
