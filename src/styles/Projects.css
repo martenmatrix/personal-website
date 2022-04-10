@@ -1,0 +1,16 @@
+.project-overview img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5%;
+    width: 95%;
+    max-width: 70rem;
+    box-shadow: 0 0 20px 10px #00000020;
+}
+
+.project-overview .click-info {
+    font-family: 'Courier New', monospace;
+    display: block;
+    font-style: italic;
+    margin: 1em auto;
+    width: max-content;
+}

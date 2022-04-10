@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Route, Routes, useParams } from 'react-router-dom';
 import Markdown from './GitHubMarkdown';
 import projects from '../data/projects';
+import '../styles/Projects.css';
 
 function ProjectOverview() {
     const params = useParams();
@@ -36,8 +37,14 @@ function ProjectOverview() {
         
     }, [project]);
 
+    if (!project) return null;
+
     return (
         <div className="project-overview">
+            <a href={project.titleImage} target="_blank" rel="noreferrer">
+                <img alt="Website being used" src={project.titleImage} />
+            </a>
+            <p className="click-info">Click the image to enlarge</p>
             <Markdown>{readMe}</Markdown>
         </div>
     )
