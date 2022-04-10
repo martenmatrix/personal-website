@@ -8,10 +8,6 @@ function LoadingCircle() {
     return <div className="loading-circle"></div>
 }
 
-function LoadingImage() {
-    return <div className="loading-image"></div>
-}
-
 function ProjectImage({ project }) {
 
     return (
