@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Route, Routes, useParams } from 'react-router-dom';
+import Markdown from './GitHubMarkdown';
 import projects from '../data/projects';
-import ReactMarkdown from 'react-markdown';
-import makeEmojisAccessible from '@fec/remark-a11y-emoji'
-import parseGitHubEmojis from 'remark-gemoji';
-import '../styles/github-markdown-light.css';
 
 function ProjectOverview() {
     const params = useParams();
@@ -41,7 +38,7 @@ function ProjectOverview() {
 
     return (
         <div className="project-overview">
-            <ReactMarkdown className="markdown-body" remarkPlugins={[makeEmojisAccessible, parseGitHubEmojis]}>{readMe}</ReactMarkdown>
+            <Markdown>{readMe}</Markdown>
         </div>
     )
 }
