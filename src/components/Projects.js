@@ -28,6 +28,7 @@ function ProjectOverview() {
     const params = useParams();
     const [project, setProject] = useState();
     const [readMe, setReadMe] = useState();
+    const [error, setError] = useState();
 
     useEffect(() => {
         const getProject = (id) => {
@@ -42,15 +43,20 @@ function ProjectOverview() {
 
     useEffect(() => {
         const getReadMe = async () => {
-            if (!project) {
-                setReadMe();
-                return;
+            try {
+                if (!project) {
+                    setReadMe();
+                    return;
+                }
+                const response = await fetch(project.readme, {
+                    method: 'GET',
+                });
+                const readme = await response.text();
+                setReadMe(readme);
+            } catch (e) {
+                console.error('Failed to fetch README from GitHub: ' + e);
+                setError(e);
             }
-            const response = await fetch(project.readme, {
-                method: 'GET',
-            });
-            const readme = await response.text();
-            setReadMe(readme);
         }
 
         getReadMe();
@@ -63,7 +69,11 @@ function ProjectOverview() {
             {
             readMe ?
             <Markdown>{readMe}</Markdown> :
-            <LoadingCircle />
+            error ? null : <LoadingCircle />
+            }
+            {
+            error &&
+            <p className="click-info">There was an error fetching a file from GitHub. Try <span className="link" onClick={() => window.location.reload()}>refreshing the page</span>.</p>
             }
         </div>
     )

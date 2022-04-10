@@ -35,7 +35,7 @@
     background-size: 300%;
 }
 
-.title-image-section .click-info {
+.click-info {
     font-family: 'Courier New', monospace;
     display: block;
     font-style: italic;
@@ -59,4 +59,10 @@
     width: 5rem;
     height: 5rem;
     animation: spinning 2s infinite linear;
+}
+
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
 }
