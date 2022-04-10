@@ -13,13 +13,16 @@ function LoadingImage() {
 }
 
 function ProjectImage({ project }) {
-    if (project) {
-        return <LoadingImage />;
-    } else return (
-        <div className="title-image">
-            <a href={project.titleImage} target="_blank" rel="noreferrer">
+
+    return (
+        <div className="title-image-section">
+            
+            {
+            project &&
+            <a className="title-image" href={project.titleImage} target="_blank" rel="noreferrer">
                 <img alt="Website being used" src={project.titleImage} />
             </a>
+            }
             <p className="click-info">Click the image to enlarge</p>
         </div>
     )
