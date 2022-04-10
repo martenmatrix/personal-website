@@ -60,7 +60,11 @@ function ProjectOverview() {
     return (
         <div className="project-overview">
             <ProjectImage project={project}/>
-            <Markdown>{readMe ? readMe : <LoadingCircle />}</Markdown>
+            {
+            readMe ?
+            <Markdown>{readMe}</Markdown> :
+            <LoadingCircle />
+            }
         </div>
     )
 }
