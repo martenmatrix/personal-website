@@ -1,4 +1,4 @@
-.project-overview img {
+.title-image img {
     display: block;
     margin: 0 auto;
     margin-top: 5%;
@@ -7,10 +7,27 @@
     box-shadow: 0 0 20px 10px #00000020;
 }
 
-.project-overview .click-info {
+.title-image .click-info {
     font-family: 'Courier New', monospace;
     display: block;
     font-style: italic;
     margin: 1em auto;
     width: max-content;
+}
+
+@keyframes spinning {
+    0% {
+        transform: rotate(0deg);
+    } 100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-circle {
+    border: 0.25rem solid black;
+    border-bottom: 0.2rem solid transparent;
+    border-radius: 5rem;
+    width: 5rem;
+    height: 5rem;
+    animation: spinning 2s infinite linear;
 }

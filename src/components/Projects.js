@@ -4,6 +4,27 @@ import Markdown from './GitHubMarkdown';
 import projects from '../data/projects';
 import '../styles/Projects.css';
 
+function LoadingCircle() {
+    return <div className="loading-circle"></div>
+}
+
+function LoadingImage() {
+    return <div className="loading-image"></div>
+}
+
+function ProjectImage({ project }) {
+    if (project) {
+        return <LoadingImage />;
+    } else return (
+        <div className="title-image">
+            <a href={project.titleImage} target="_blank" rel="noreferrer">
+                <img alt="Website being used" src={project.titleImage} />
+            </a>
+            <p className="click-info">Click the image to enlarge</p>
+        </div>
+    )
+}
+
 function ProjectOverview() {
     const params = useParams();
     const [project, setProject] = useState();
@@ -37,15 +58,10 @@ function ProjectOverview() {
         
     }, [project]);
 
-    if (!project) return null;
-
     return (
         <div className="project-overview">
-            <a href={project.titleImage} target="_blank" rel="noreferrer">
-                <img alt="Website being used" src={project.titleImage} />
-            </a>
-            <p className="click-info">Click the image to enlarge</p>
-            <Markdown>{readMe}</Markdown>
+            <ProjectImage project={project}/>
+            <Markdown>{readMe ? readMe : <LoadingCircle />}</Markdown>
         </div>
     )
 }
