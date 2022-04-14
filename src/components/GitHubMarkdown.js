@@ -2,7 +2,6 @@ import ReactMarkdown from 'react-markdown';
 import makeEmojisAccessible from '@fec/remark-a11y-emoji'
 import parseGitHubEmojis from 'remark-gemoji';
 import supportGFM from 'remark-gfm';
-import linkHeadingsToThemselves from 'rehype-autolink-headings';
 import addIdToHeadings from 'rehype-slug';
 import sanitizeHTML from 'rehype-sanitize';
 import '../styles/github-markdown-light.css';
@@ -62,7 +61,7 @@ fixBrokenLinks();
 
 function GitHubMarkdown({ children }) {
     // Remark plugins to transform emojis is passed into rehypePlugins array => ids need to be created before github emojis are parsed, otherwise toc will not work
-    return <ReactMarkdown className="markdown-body" remarkPlugins={[supportGFM, makeEmojisAccessible]} rehypePlugins={[addIdToHeadings, linkHeadingsToThemselves, parseGitHubEmojis, sanitizeHTML]}>{children}</ReactMarkdown>
+    return <ReactMarkdown className="markdown-body" remarkPlugins={[supportGFM, makeEmojisAccessible]} rehypePlugins={[addIdToHeadings, parseGitHubEmojis, sanitizeHTML]}>{children}</ReactMarkdown>
 }
 
 export default GitHubMarkdown;
