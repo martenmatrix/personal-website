@@ -1,12 +1,105 @@
 import fifoCalc from '../img/fifo-calc.gif';
+import calculator from '../img/calculator.gif';
+import weatherApp from '../img/weather-app.gif';
+import ticTacToe from '../img/tic-tac-toe.gif';
+import shoppingCart from '../img/shopping-cart.gif';
+import todoList from '../img/todo-list.gif';
+import battleship from '../img/battleship.gif';
 
 const projects = [
     {
         id: 'fifo-calc',
         titleImage: fifoCalc,
+        deploy: 'https://trading-csv-fifo-calculator.web.app/',
         github: 'https://github.com/martenmatrix/capital-gains-trading-calculator',
-        readme: 'https://raw.githubusercontent.com/martenmatrix/capital-gains-trading-calculator/master/README.md'
+        readme: 'https://raw.githubusercontent.com/martenmatrix/capital-gains-trading-calculator/master/README.md',
+    },
+    {
+        id: 'calculator',
+        titleImage: calculator,
+        deploy: 'https://martenmatrix.github.io/calculator/',
+        github: 'https://github.com/martenmatrix/calculator/',
+        readme: 'https://raw.githubusercontent.com/martenmatrix/calculator/main/README.md',
+    },
+    {
+        id: 'weather-app',
+        titleImage: weatherApp,
+        deploy: 'https://martenmatrix.github.io/weather-app/',
+        github: 'https://github.com/martenmatrix/weather-app/',
+        readme: 'https://raw.githubusercontent.com/martenmatrix/weather-app/main/README.md',
+    },
+    {
+        id: 'tic-tac-toe',
+        titleImage: ticTacToe,
+        deploy: 'https://martenmatrix.github.io/tic-tac-toe/',
+        github: 'https://github.com/martenmatrix/tic-tac-toe',
+        readme: 'https://raw.githubusercontent.com/martenmatrix/tic-tac-toe/main/README.md',
+    },
+    {
+        id: 'shopping-cart',
+        titleImage: shoppingCart,
+        deploy: 'https://martenmatrix.github.io/shopping-cart/',
+        github: 'https://github.com/martenmatrix/shopping-cart',
+        readme: 'https://raw.githubusercontent.com/martenmatrix/shopping-cart/main/README.md',
+    },
+    {
+        id: 'cv-generator',
+        deploy: 'https://martenmatrix.github.io/cv-generator/',
+        github: 'https://github.com/martenmatrix/cv-generator'
+    },
+    {
+        id: 'cocktail-mixer',
+        deploy: '#',
+        github: 'https://github.com/martenmatrix/cocktail-mixer',
+        readme: 'https://raw.githubusercontent.com/martenmatrix/cocktail-mixer/main/README.md',
+    },
+    {
+        id: 'battleship',
+        titleImage: battleship,
+        deploy: 'https://martenmatrix.github.io/odin-battleship/',
+        github: 'https://github.com/martenmatrix/odin-battleship',
+        readme: 'https://raw.githubusercontent.com/martenmatrix/battleship/main/README.md'
+    },
+    {
+        id: 'memory-card',
+        deploy: 'https://martenmatrix.github.io/memory-card/',
+        github: 'https://github.com/martenmatrix/odin-memory-card'
+    },
+    {
+        id: 'javascript-form',
+        deploy: 'https://martenmatrix.github.io/odin-javascript-form/',
+        github: 'https://github.com/martenmatrix/odin-javascript-form',
+        hide: true
+    },
+    {
+        id: 'restaurant-page',
+        deploy: 'https://martenmatrix.github.io/restaurant-page/',
+        github: 'https://github.com/martenmatrix/restaurant-page',
+        hide: true
+    },
+    {
+        id: 'todo-list',
+        titleImage: todoList,
+        deploy: 'https://martenmatrix.github.io/todo-list/',
+        github: 'https://github.com/martenmatrix/todo-list',
+        readme: 'https://raw.githubusercontent.com/martenmatrix/todo-list/main/README.md',
+    },
+    {
+        id: 'mobile-menu',
+        deploy: 'https://martenmatrix.github.io/mobile-menu/',
+        github: 'https://github.com/martenmatrix/odin-mobile-menu'
+    },
+    {
+        id: 'matrixaccs-frontend',
+        // hide imprint
+    },
+    {
+        id: 'personal-website',
+        deploy: 'https://marten.codes',
+        github: 'https://github.com/martenmatrix/personal-website',
     }
+    // maybe python codebases, however there is some confidential information in it
+    // restaurant-page ?
 ]
 
 export default projects;
