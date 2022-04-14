@@ -16,6 +16,7 @@
     "remark-collapse": "^0.1.2",
     "remark-gemoji": "^7.0.1",
     "remark-gfm": "^3.0.1",
+    "@fec/remark-a11y-emoji": "^3.1.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -41,8 +42,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@fec/remark-a11y-emoji": "^3.1.0"
   }
 }
