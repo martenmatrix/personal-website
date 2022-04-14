@@ -2,7 +2,6 @@ import ReactMarkdown from 'react-markdown';
 import makeEmojisAccessible from '@fec/remark-a11y-emoji'
 import parseGitHubEmojis from 'remark-gemoji';
 import supportGFM from 'remark-gfm';
-import addIdToHeadings from 'rehype-slug';
 import sanitizeHTML from 'rehype-sanitize';
 import '../styles/github-markdown-light.css';
 
