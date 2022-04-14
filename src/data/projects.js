@@ -5,6 +5,7 @@ import ticTacToe from '../img/tic-tac-toe.gif';
 import shoppingCart from '../img/shopping-cart.gif';
 import todoList from '../img/todo-list.gif';
 import battleship from '../img/battleship.gif';
+import cocktailMixer from '../img/cocktail-mixer.gif';
 
 const projects = [
     {
@@ -50,6 +51,7 @@ const projects = [
     {
         id: 'cocktail-mixer',
         deploy: '#',
+        titleImage: cocktailMixer,
         github: 'https://github.com/martenmatrix/cocktail-mixer',
         readme: 'https://raw.githubusercontent.com/martenmatrix/cocktail-mixer/main/README.md',
     },
