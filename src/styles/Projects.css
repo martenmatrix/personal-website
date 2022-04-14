@@ -29,6 +29,7 @@
 }
 
 .title-image img {
+    object-fit: scale-down;
     color: transparent; /* prevent alt text from showing up */
     animation: slide 1s infinite linear;
     background: linear-gradient(-50deg, white 49%, #00000007 49%, #00000007 52%, white 52%);
