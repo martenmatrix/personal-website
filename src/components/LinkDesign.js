@@ -19,7 +19,7 @@ function LinkDesign({ a, children, className, ...rest }) {
     const newClassName = `link-design ${className}`;
 
     if (unableToParseByReactRouter(a)) {
-        return <a href={a} className={newClassName} {...rest}>{children}{isAbsoluteLink(a) && <img src={arrowUpRight} alt="arrow up right" />}</a>;
+        return <a href={a} className={newClassName} {...rest} rel="noreferrer">{children}{isAbsoluteLink(a) && <img src={arrowUpRight} alt="arrow up right" />}</a>;
     } else {
         return <Link to={a} className={newClassName} {...rest}>{children}</Link>;
     }
