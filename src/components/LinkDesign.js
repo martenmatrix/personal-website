@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import arrowUpRight from '../img/arrow-up-right.svg';
 import '../styles/Link.css';
 
 function LinkDesign({ a, children, className, ...rest }) {
@@ -17,8 +18,8 @@ function LinkDesign({ a, children, className, ...rest }) {
 
     const newClassName = `link-design ${className}`;
 
-    if (isAbsoluteLink) {
-        return <a href={a} className={newClassName} {...rest}>{children}</a>;
+    if (unableToParseByReactRouter(a)) {
+        return <a href={a} className={newClassName} {...rest}>{children}{isAbsoluteLink(a) && <img src={arrowUpRight} alt="arrow up right" />}</a>;
     } else {
         return <Link to={a} className={newClassName} {...rest}>{children}</Link>;
     }

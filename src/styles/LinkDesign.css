@@ -7,3 +7,10 @@
     position: relative;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* remove grey selection in safari */
 }
+
+.link-design img {
+    position: absolute;
+    font-size: 0;
+    top: -0.25em;
+    right: -1em;
+}
