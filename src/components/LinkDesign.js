@@ -4,7 +4,6 @@ import '../styles/LinkDesign.css';
 
 function LinkDesign({ to, children, className, ...rest }) {
 
-
     const isAbsoluteLink = (link) => {
         const matches = link.match(/^(https?)/gi);
         const hasMatch = !!matches;
