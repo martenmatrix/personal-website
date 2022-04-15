@@ -1,0 +1,9 @@
+.link-design {
+    font-family: 'Cutive Mono', monospace; /*TODO maybe default font courier instead of cutive mono? */
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* remove grey selection in safari */
+}
