@@ -20,22 +20,6 @@
     padding: 0;
 }
 
-.links a {
-    font-family: 'Cutive Mono', monospace; /*TODO maybe default font courier instead of cutive mono? */
-    font-size: x-large;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-    position: relative;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* remove grey selection in safari */
-}
-
-.links img {
-    position: absolute;
-    top: -0.25em;
-    right: -1em;
-}
-
 .links li:nth-child(2) { animation-delay: 200ms; }
 .links li:nth-child(3) { animation-delay: 400ms; }
 .links li:nth-child(4) { animation-delay: 600ms; }
@@ -46,22 +30,5 @@
 
     animation: fade-in ease-in 200ms;
     animation-fill-mode: forwards;
-}
-
-.links a::after {
-    content: "";
-    display: block;
-
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 50%;
-    background: black;
-    opacity: 20%;
-    transition: width 200ms;
-}
-
-.links a:hover::after {
-    width: 100%;
 }
 
