@@ -6,11 +6,15 @@ import shoppingCart from '../img/shopping-cart.gif';
 import todoList from '../img/todo-list.gif';
 import battleship from '../img/battleship.gif';
 import cocktailMixer from '../img/cocktail-mixer.gif';
+import CVGenerator from '../img/cv-generator.gif';
+import MobileMenu from '../img/mobile-menu.gif';
+import matrixaccsFrontend from '../img/matrixaccs-frontend.gif';
 
 const projects = [
     {
         id: 'fifo-calc',
         titleImage: fifoCalc,
+        //analytics?
         deploy: 'https://trading-csv-fifo-calculator.web.app/',
         github: 'https://github.com/martenmatrix/capital-gains-trading-calculator',
         readme: 'https://raw.githubusercontent.com/martenmatrix/capital-gains-trading-calculator/master/README.md',
@@ -45,13 +49,15 @@ const projects = [
     },
     {
         id: 'cv-generator',
+        titleImage: CVGenerator,
         deploy: 'https://martenmatrix.github.io/cv-generator/',
-        github: 'https://github.com/martenmatrix/cv-generator'
+        github: 'https://github.com/martenmatrix/cv-generator',
+        readme: 'https://raw.githubusercontent.com/martenmatrix/cv-generator/main/README.md',
     },
     {
         id: 'cocktail-mixer',
-        deploy: '#',
         titleImage: cocktailMixer,
+        deploy: '#',
         github: 'https://github.com/martenmatrix/cocktail-mixer',
         readme: 'https://raw.githubusercontent.com/martenmatrix/cocktail-mixer/main/README.md',
     },
@@ -88,11 +94,17 @@ const projects = [
     },
     {
         id: 'mobile-menu',
+        titleImage: MobileMenu,
         deploy: 'https://martenmatrix.github.io/mobile-menu/',
-        github: 'https://github.com/martenmatrix/odin-mobile-menu'
+        github: 'https://github.com/martenmatrix/mobile-menu',
+        readme: 'https://raw.githubusercontent.com/martenmatrix/mobile-menu/main/README.md',
     },
     {
         id: 'matrixaccs-frontend',
+        titleImage: matrixaccsFrontend,
+        deploy: 'https://www.matrixaccs.com',
+        github: 'https://github.com/martenmatrix/matrixaccs-frontend-public',
+        readme: 'https://raw.githubusercontent.com/martenmatrix/matrixaccs-frontend-public/master/README.md'
         // hide imprint
     },
     {
@@ -100,8 +112,7 @@ const projects = [
         deploy: 'https://marten.codes',
         github: 'https://github.com/martenmatrix/personal-website',
     }
-    // maybe python codebases, however there is some confidential information in it
-    // restaurant-page ?
+    // maybe python codebases, however there is some confidential information in it, make sure to delete the file from the complete history
 ]
 
 export default projects;

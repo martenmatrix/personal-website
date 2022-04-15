@@ -1,3 +1,4 @@
 # Files to be stored with Git LFS
-*.gif
+*.gif binary
+*.gif[[:space:]]-binary filter=lfs diff=lfs merge=lfs -text
 *.gif filter=lfs diff=lfs merge=lfs -text
