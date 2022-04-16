@@ -14,8 +14,8 @@ function Links() {
                     const animationDelay = `${animationDelayDuration}ms`;
 
                     return <li key={index} style={{ animationDelay }}>
-                        <LinkDesign to={linkObject.href} target={getTargetValue(linkObject)}>{linkObject.title}</LinkDesign>
-                    </li>
+                                <LinkDesign to={linkObject.href} target={getTargetValue(linkObject)}>{linkObject.title}</LinkDesign>
+                           </li>
                 })}
             </ul>
         </nav>
