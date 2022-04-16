@@ -42,6 +42,8 @@ The object, contained in the file, will be used to render the links:
 		- `href: <string>`—Assign the path to which the link should re-direct. If this links to an external source (mailto links excluded), an arrow will be displayed on the link element.
 		> :bulb: If you want to display a link to the overview of your showcased projects, set the `href` of the link to `projects`.
 
+		- `newTab`—Specify, if the link should be opened in a new tab.
+
 ##### Customization of projects
 The page located at `/projects` displays an overview of your projects and a detailed overview after clicking on it, the pages are rendered based on the specifications in the `project.js` file.
 
