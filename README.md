@@ -94,6 +94,8 @@ If you want to run the application on your local pc or just want to contribute, 
 2. Install the dependencies.
 	`npm install`
 
+3. If you want to download the `.gif`'s used for the examples, you'll have to [install Git LFS](https://git-lfs.github.com/). After installing it, run `git lfs pull` in the projects directory to pull the images. However, this is only necessary, if you want to display the images of the projects, which are examples.
+
 3. If you want to run the website on your localhost type: 
 	`npm run start`
 
