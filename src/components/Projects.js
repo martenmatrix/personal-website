@@ -9,6 +9,7 @@ function LoadingCircle() {
 }
 
 function ProjectImage({ project }) {
+    const [hasLoaded, setHasLoaded] = useState(false);
 
     return (
         <div className="title-image-section">
@@ -16,7 +17,7 @@ function ProjectImage({ project }) {
             {
             project &&
             <a className="title-image" href={project.titleImage} target="_blank" rel="noreferrer">
-                <img alt="Website being used" src={project.titleImage} />
+                <img alt="Website being used" src={project.titleImage} className={hasLoaded ? null : 'loading'} onLoad={() => setHasLoaded(true)}/>
             </a>
             }
             <p className="click-info">Click the image to enlarge</p>

@@ -38,9 +38,11 @@ The object, contained in the file, will be used to render the links:
 - `gitName: <string>`⁣—This specifies the name of the GitHub service you are using. It is only used on a page of a project you've showcased to state the correct site it is linking to.
 - `homepageLinks: <array>`—This array contains an object for each link on the homepage.
 	- `<object>`
-		- `title: <string>`—Assign the link a title.
-		- `href: <string>`—Assign the path to which the link should re-direct. If this links to an external source (mailto links excluded), an arrow will be displayed on the link element.
+		- `title: <string> required`—Assign the link a title.
+		- `href: <string> required`—Assign the path to which the link should re-direct. If this links to an external source (mailto links excluded), an arrow will be displayed on the link element.
 		> :bulb: If you want to display a link to the overview of your showcased projects, set the `href` of the link to `projects`.
+
+		- `newTab: <boolean>`—Specify, if the link should be opened in a new tab.
 
 ##### Customization of projects
 The page located at `/projects` displays an overview of your projects and a detailed overview after clicking on it, the pages are rendered based on the specifications in the `project.js` file.
@@ -78,6 +80,7 @@ If something does not work as expected, please [create an issue](https://github.
 - easily customizable
 - slick and beautiful design
 - parses your project's README's automatically to HTML, even “markdown” from GitHub
+- error boundary
 - add as many links as you want
 - showcase as many projects as you want
 - display a detailed overview of your project
@@ -91,6 +94,8 @@ If you want to run the application on your local pc or just want to contribute, 
 
 2. Install the dependencies.
 	`npm install`
+
+3. If you want to download the `.gif`'s used for the examples, you'll have to [install Git LFS](https://git-lfs.github.com/). After installing it, run `git lfs pull` in the projects directory to pull the images. However, this is only necessary, if you want to display the images of the projects, which are examples.
 
 3. If you want to run the website on your localhost type: 
 	`npm run start`
