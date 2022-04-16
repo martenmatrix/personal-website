@@ -71,7 +71,8 @@ const projects = [
     {
         id: 'memory-card',
         deploy: 'https://martenmatrix.github.io/memory-card/',
-        github: 'https://github.com/martenmatrix/odin-memory-card'
+        github: 'https://github.com/martenmatrix/odin-memory-card',
+        readme: 'https://raw.githubusercontent.com/martenmatrix/memory-card/main/README.md',
     },
     {
         id: 'javascript-form',
@@ -111,6 +112,7 @@ const projects = [
         id: 'personal-website',
         deploy: 'https://marten.codes',
         github: 'https://github.com/martenmatrix/personal-website',
+        readme: 'https://raw.githubusercontent.com/martenmatrix/personal-website/master/README.md',
     }
     // maybe python codebases, however there is some confidential information in it, make sure to delete the file from the complete history
 ]
