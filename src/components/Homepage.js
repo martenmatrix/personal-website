@@ -1,5 +1,5 @@
 import LinkDesign from './LinkDesign';
-import '../styles/Homepage.css';
+import '../styles/Homepage.scss';
 
 function Links() {
     return (
