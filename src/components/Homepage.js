@@ -9,11 +9,14 @@ function Links() {
     return (
         <nav>
             <ul className="links">
-                {links.map((linkObject, index) => (
-                    <li key={index}>
+                {links.map((linkObject, index) => {
+                    const animationDelayDuration = (200 * index);
+                    const animationDelay = `${animationDelayDuration}ms`;
+
+                    return <li key={index} style={{ animationDelay }}>
                         <LinkDesign to={linkObject.href} target={getTargetValue(linkObject)}>{linkObject.title}</LinkDesign>
                     </li>
-                ))}
+                })}
             </ul>
         </nav>
     )
