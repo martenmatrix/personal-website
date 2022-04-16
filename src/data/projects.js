@@ -8,13 +8,13 @@ import battleship from '../img/battleship.gif';
 import cocktailMixer from '../img/cocktail-mixer.gif';
 import CVGenerator from '../img/cv-generator.gif';
 import MobileMenu from '../img/mobile-menu.gif';
+import MemoryCard from '../img/memory-card.gif';
 import matrixaccsFrontend from '../img/matrixaccs-frontend.gif';
 
 const projects = [
     {
         id: 'fifo-calc',
         titleImage: fifoCalc,
-        //analytics?
         deploy: 'https://trading-csv-fifo-calculator.web.app/',
         github: 'https://github.com/martenmatrix/capital-gains-trading-calculator',
         readme: 'https://raw.githubusercontent.com/martenmatrix/capital-gains-trading-calculator/master/README.md',
@@ -70,6 +70,7 @@ const projects = [
     },
     {
         id: 'memory-card',
+        titleImage: MemoryCard,
         deploy: 'https://martenmatrix.github.io/memory-card/',
         github: 'https://github.com/martenmatrix/odin-memory-card',
         readme: 'https://raw.githubusercontent.com/martenmatrix/memory-card/main/README.md',
@@ -105,8 +106,7 @@ const projects = [
         titleImage: matrixaccsFrontend,
         deploy: 'https://www.matrixaccs.com',
         github: 'https://github.com/martenmatrix/matrixaccs-frontend-public',
-        readme: 'https://raw.githubusercontent.com/martenmatrix/matrixaccs-frontend-public/master/README.md'
-        // hide imprint
+        readme: 'https://raw.githubusercontent.com/martenmatrix/matrixaccs-frontend-public/master/README.md',
     },
     {
         id: 'personal-website',
