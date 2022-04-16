@@ -1,0 +1,30 @@
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.homepage {
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.links li {
+    opacity: 0;
+    transform: translateY(25%);
+
+    animation: fade-in ease-in 200ms;
+    animation-fill-mode: forwards;
+}
+
