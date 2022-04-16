@@ -80,6 +80,7 @@ If something does not work as expected, please [create an issue](https://github.
 - easily customizable
 - slick and beautiful design
 - parses your project's README's automatically to HTML, even “markdown” from GitHub
+- error boundary
 - add as many links as you want
 - showcase as many projects as you want
 - display a detailed overview of your project
