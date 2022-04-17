@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import ProjectOverview from './ProjectOverview';
-import '../styles/Projects.css';
 
 
 
