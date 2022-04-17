@@ -3,7 +3,6 @@ import { Route, Routes, useParams } from 'react-router-dom';
 import LinkDesign from './LinkDesign';
 import Markdown from './GitHubMarkdown';
 import projects from '../data/projects';
-import links from '../data/links';
 import '../styles/Projects.css';
 
 function LoadingCircle() {
