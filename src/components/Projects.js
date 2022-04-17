@@ -27,6 +27,16 @@ function ProjectImage({ project }) {
     )
 }
 
+function ViewRepository({ project }) {
+    const hasGitLink = project && project.hasOwnProperty('git');
+
+    if (hasGitLink) {
+        return <LinkDesign className="link-to-repo" target="_blank" to={project.git}>view repository</LinkDesign>
+    }
+
+    return null;
+}
+
 function ProjectOverview() {
     const params = useParams();
     const [project, setProject] = useState();
@@ -78,7 +88,7 @@ function ProjectOverview() {
             error &&
             <p className="click-info">There was an error fetching a file from GitHub. Try <span className="link" onClick={() => window.location.reload()}>refreshing the page</span>.</p>
             }
-            {project && (project.hasOwnProperty('git')) && <LinkDesign className="link-to-repo" target="_blank" to={project.git}>view repository</LinkDesign>}
+            <ViewRepository project={project}/>
         </div>
     )
 }
