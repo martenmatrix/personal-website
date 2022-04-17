@@ -1,6 +1,5 @@
 @supports (scrollbar-gutter: stable) {
     .project-overview {
-      overflow-y: auto;
       scrollbar-gutter: stable;
     }
 }
