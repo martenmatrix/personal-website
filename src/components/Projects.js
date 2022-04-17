@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Route, Routes, useParams } from 'react-router-dom';
+import LinkDesign from './LinkDesign';
 import Markdown from './GitHubMarkdown';
 import projects from '../data/projects';
+import links from '../data/links';
 import '../styles/Projects.css';
 
 function LoadingCircle() {
@@ -76,6 +78,7 @@ function ProjectOverview() {
             error &&
             <p className="click-info">There was an error fetching a file from GitHub. Try <span className="link" onClick={() => window.location.reload()}>refreshing the page</span>.</p>
             }
+            {project && (project.hasOwnProperty('git')) && <LinkDesign className="link-to-repo" target="_blank" to={project.git}>Go to projects repository</LinkDesign>}
         </div>
     )
 }
