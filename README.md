@@ -34,8 +34,7 @@ Customization is fairly easy, usually you just have to touch the files in the fo
 ##### Customization of links
 The page displays links to external sources and internal sources, these pages are rendered based on the specifications in the `links.js` file. 
 
-The object, contained in the file, will be used to render the links:
-- `gitName: <string>`⁣—This specifies the name of the GitHub service you are using. It is only used on a page of a project you've showcased to state the correct site it is linking to.
+The array, contained in the file, will be used to render the links:
 - `homepageLinks: <array>`—This array contains an object for each link on the homepage.
 	- `<object>`
 		- `title: <string> required`—Assign the link a title.
