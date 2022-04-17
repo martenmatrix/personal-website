@@ -71,8 +71,16 @@
     color: blue;
 }
 
-.link-to-repo {
-    position: fixed;
-    bottom: 3rem;
-    right: 3rem;
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 1500px) {
+    .link-to-repo {
+        position: fixed;
+        bottom: 3rem;
+        right: 3rem;
+    }   
 }

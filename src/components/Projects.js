@@ -30,7 +30,9 @@ function ViewRepository({ project }) {
     const hasGitLink = project && project.hasOwnProperty('git');
 
     if (hasGitLink) {
-        return <LinkDesign className="link-to-repo" target="_blank" to={project.git}>view repository</LinkDesign>
+        return (<div className="wrapper">
+                    <LinkDesign className="link-to-repo" target="_blank" to={project.git}>view repository</LinkDesign>
+                </div>)
     }
 
     return null;
@@ -78,6 +80,7 @@ function ProjectOverview() {
     return (
         <div className="project-overview">
             <ProjectImage project={project}/>
+            <ViewRepository project={project}/>
             {
             readMe ?
             <Markdown>{readMe}</Markdown> :
@@ -87,7 +90,6 @@ function ProjectOverview() {
             error &&
             <p className="click-info">There was an error fetching a file from GitHub. Try <span className="link" onClick={() => window.location.reload()}>refreshing the page</span>.</p>
             }
-            <ViewRepository project={project}/>
         </div>
     )
 }
