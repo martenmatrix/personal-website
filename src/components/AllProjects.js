@@ -1,8 +1,17 @@
+import Image from './Image';
 import projects from '../data/projects';
 import '../styles/AllProjects.css';
 
 function ProjectContainer({ project }) {
-    	return null;
+    	return (
+            <div className="project-container">
+                <Image src={project.titleImage} />
+                <div className="title-description-wrapper">
+                    <div className="title">{project.title}</div>
+                    <div className="description">{project.description}</div>
+                </div>
+            </div>
+        );
 }
 
 function AllProjects() {
@@ -31,9 +40,14 @@ function AllProjects() {
     });
 
     return (
-        <div className="all-projects">
-            {sortedProjects.map((project) => <ProjectContainer key={project.id} project={project} />)}
-        </div>
+        <ul className="all-projects">
+            {sortedProjects.map((project) => (
+                <li>
+                    <ProjectContainer key={project.id} project={project} />
+                </li>
+                )
+            )}
+        </ul>
     )
 }
 
