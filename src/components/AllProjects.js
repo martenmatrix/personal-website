@@ -1,4 +1,4 @@
-import '..styles/AllProjects.css';
+import '../styles/AllProjects.css';
 
 function AllProjects() {
     return null;
