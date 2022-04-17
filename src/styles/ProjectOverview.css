@@ -4,8 +4,7 @@
     }
 }
 
-.title-image > * {
-    display: block;
+.title-image img {
     margin: 0 auto;
     margin-top: 5%;
     width: 95%;
@@ -13,29 +12,11 @@
     height: auto;
     aspect-ratio: 16 / 9;
     box-shadow: 0 0 20px 10px #00000020;
+    object-fit: contain;
 }
 
 .title-image {
     text-decoration: none;
-}
-
-@keyframes slide {
-    0% {
-        background-position: right;
-    } 100% {
-        background-position: left;
-    }
-}
-
-.title-image img {
-    object-fit: contain;
-    color: transparent; /* prevent alt text from showing up */
-}
-
-.title-image img.loading {
-    animation: slide 1s infinite linear;
-    background: linear-gradient(-50deg, white 49%, #00000007 49%, #00000007 52%, white 52%);
-    background-size: 300%;
 }
 
 .click-info {

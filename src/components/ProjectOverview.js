@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import LinkDesign from './LinkDesign';
 import Markdown from './GitHubMarkdown';
+import Image from './Image';
 import projects from '../data/projects';
 import '../styles/ProjectOverview.css';
 
@@ -10,13 +11,12 @@ function LoadingCircle() {
 }
 
 function ProjectImage({ project }) {
-    const [hasLoaded, setHasLoaded] = useState(false);
     const projectImageLink = project ? project.titleImage : null;
 
     return (
         <div className="title-image-section">
             <a className="title-image" href={projectImageLink} target="_blank" rel="noreferrer">
-                <img alt="Website being used" src={projectImageLink} className={hasLoaded ? null : 'loading'} onLoad={() => setHasLoaded(true)}/>
+                <Image src={projectImageLink}/>
             </a>
             <p className="click-info">Click the image to enlarge</p>
         </div>

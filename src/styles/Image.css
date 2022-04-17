@@ -1,0 +1,18 @@
+@keyframes slide {
+    0% {
+        background-position: right;
+    } 100% {
+        background-position: left;
+    }
+}
+
+.image-with-loading {
+    display: block;
+    color: transparent; /* prevent alt text from showing up */
+}
+
+.image-with-loading.loading {
+    animation: slide 1s infinite linear;
+    background: linear-gradient(-50deg, white 49%, #00000007 49%, #00000007 52%, white 52%);
+    background-size: 300%;
+}
