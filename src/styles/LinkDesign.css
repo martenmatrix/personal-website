@@ -12,6 +12,7 @@
 
 .link-design img {
     position: absolute;
+    color: transparent; /* prevent alt text from showing up */
     top: -0.25em;
     right: -1em;
 }
