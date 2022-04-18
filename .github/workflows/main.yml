@@ -11,6 +11,10 @@ jobs:
     - uses: actions/checkout@v2.1.0
       with:
         fetch-depth: 2
+    - name: Install dependencies
+      run: npm ci
+    - name: Create production bundle
+      run: npm run build
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
@@ -19,4 +23,5 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         port: ${{ secrets.FTP_PORT }}
         protocol: ftps
+        local-dir: ./build/
         server-dir: ./
