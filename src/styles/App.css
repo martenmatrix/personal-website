@@ -13,6 +13,7 @@ body, html {
 }
 
 .black-to-white {
+    z-index: 100;
     position: fixed;
     line-height: 0;
     top: 0;
