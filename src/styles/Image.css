@@ -6,13 +6,30 @@
     }
 }
 
-.image-with-loading {
+.loading-image {
+    position: relative;
+}
+
+.loading-image img {
     display: block;
+    width: 100%;
+    height: 100%;
     color: transparent; /* prevent alt text from showing up */
 }
 
-.image-with-loading.loading {
+.loading-animation {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     animation: slide 1s infinite linear;
-    background: linear-gradient(-50deg, white 49%, #00000007 49%, #00000007 52%, white 52%);
+    background: linear-gradient(-50deg, white 49%, #F6F6F6 49%, #F6F6F6 52%, white 52%);
     background-size: 300%;
+}
+
+.loading .loading-animation {
+    opacity: 1;
 }
