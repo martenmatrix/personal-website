@@ -1,13 +1,14 @@
 import Image from './Image';
 import projects from '../data/projects';
 import '../styles/AllProjects.css';
+import { Link } from 'react-router-dom';
 
 function ProjectContainer({ project }) {
     	return (
             <div className="project-container">
-                <Image src={project.titleImage} />
+                <Image className="image" src={project.titleImage} />
                 <div className="title-description-wrapper">
-                    <div className="title">{project.title}</div>
+                    <h2 className="title">{project.title}</h2>
                     <div className="description">{project.description}</div>
                 </div>
             </div>
@@ -40,14 +41,19 @@ function AllProjects() {
     });
 
     return (
-        <ul className="all-projects">
-            {sortedProjects.map((project) => (
-                <li>
-                    <ProjectContainer key={project.id} project={project} />
-                </li>
-                )
-            )}
-        </ul>
+        <>
+            <h1>Projects</h1>
+            <ul className="all-projects">
+                {sortedProjects.map((project) => (
+                    <li>
+                        <Link to={project.id}>
+                            <ProjectContainer key={project.id} project={project} />
+                        </Link>
+                    </li>
+                    )
+                )}
+            </ul>
+        </>
     )
 }
 
