@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+:root {
+    --border-thickness: 0.25rem;
+}
 
 h1 {
     font-family: 'Montserrat', sans-serif;
@@ -23,24 +26,87 @@ h1 {
 .all-projects li {
     display: block;
     width: 90%;
-    max-width: 30rem;
+    max-width: 50rem;
+    height: 25rem;
 }
 
 .all-projects li a {
     text-decoration: none;
     color: black;
+    width: 100%;
+    height: 100%;
 }
 
 .project-container {
-    height: 15rem;
+    width: 100%;
+    height: 100%;
     position: relative;
-    overflow: hidden;
+
+    border: solid 0.25rem transparent; /* placeholder for animated border */
+}
+
+.border {
+    background: #d3d3d3;
+    position: absolute;
+    z-index: 1;
+}
+
+.border.top {
+    width: 0;
+    height: var(--border-thickness);
+    top: calc(-1 * var(--border-thickness));
+    left: 0;
+    transition: 70ms width cubic-bezier(.99,0,1,1) 170ms;
+}
+
+.border.right {
+    top: 0;
+    right: calc(-1 * var(--border-thickness));
+    width: var(--border-thickness);
+    height: 0;
+    transition: 70ms height cubic-bezier(.99,0,1,1) 120ms;
+}
+
+.border.bottom {
+    right: 0;
+    bottom: calc(-1 * var(--border-thickness));
+    width: 0;
+    height: var(--border-thickness);
+    transition: 70ms width cubic-bezier(.99,0,1,1) 70ms;
+}
+
+.border.left {
+    left: calc(-1 * var(--border-thickness));
+    bottom: 0;
+    width: var(--border-thickness);
+    height: 0;
+    transition: 70ms height cubic-bezier(.99,0,1,1) 0ms;
+}
+
+.project-container:hover .border.top {
+    width: calc(100% + var(--border-thickness));
+    transition: 70ms width cubic-bezier(.99,0,1,1) 0ms;
+}
+
+.project-container:hover .border.right {
+    height: calc(100% + var(--border-thickness));
+    transition: 70ms height cubic-bezier(.99,0,1,1) 70ms;
+}
+
+.project-container:hover .border.bottom {
+    width: calc(100% + var(--border-thickness));
+    transition: 70ms width cubic-bezier(.99,0,1,1) 120ms;
+}
+
+.project-container:hover .border.left {
+    height: calc(100% + var(--border-thickness));
+    transition: 70ms height cubic-bezier(.99,0,1,1) 170ms;
 }
 
 .project-container .title-description-wrapper {
     margin: 0.2rem;
     width: 100%;
-    height: 40%;
+    height: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -48,9 +114,8 @@ h1 {
 
 .project-container .image {
     width: 100%;
-    height: 60%;
+    height: 70%;
     object-fit: contain;
-    aspect-ratio: 16 / 9;
 }
 
 .project-container .image::after {
@@ -59,7 +124,7 @@ h1 {
     top: 0;
     width: 100%;
     height: 100%;
-    box-shadow: inset 0 0 20px black;
+    box-shadow: inset 0 0 20px 5px #00000020;
 }
 
 .project-container .title {

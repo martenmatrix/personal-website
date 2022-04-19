@@ -6,9 +6,13 @@ import { Link } from 'react-router-dom';
 function ProjectContainer({ project }) {
     	return (
             <div className="project-container">
+                <span className="top border"></span>
+                <span className="right border"></span>
+                <span className="bottom border"></span>
+                <span className="left border"></span>
                 <Image className="image" src={project.titleImage} />
                 <div className="title-description-wrapper">
-                    <h2 className="title">{project.title}</h2>
+                    <h2 to="/" className="title">{project.title}</h2>
                     <div className="description">{project.description}</div>
                 </div>
             </div>
