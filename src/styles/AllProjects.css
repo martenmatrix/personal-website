@@ -20,7 +20,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2grem;
 }
 
 .all-projects li {
@@ -43,6 +43,7 @@ h1 {
     position: relative;
 
     border: solid 0.25rem transparent; /* placeholder for animated border */
+    box-shadow: 5px 5px 10px #00000020;
 }
 
 .border {
