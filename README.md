@@ -60,6 +60,7 @@ The page located at `/projects` displays an overview of your projects and a deta
 			>:bulb: If you want to customize the link title, check out the section about the customization of links.
 			
 		- `deploy: <string>`—If your project got deployed somewhere, enter the link of the deployment.
+		- `hide: <boolean>`—Set this to `false` to hide your project from the overview of all projects.
 
 If you want to upload an image of your project to your own site, you'll have to put it in the `img` folder located at `src/img/`, then you need to import it in the `projects.js` file.
 As an example, if you would want to import a GIF called “my-image”, you would import it like this: 
