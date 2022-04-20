@@ -13,7 +13,11 @@ function ProjectContainer({ project }) {
                 <span className="left border"></span>
                 <Image className="image" src={project.titleImage} />
                 <div className="title-description-wrapper">
-                    <h2 to="/" className="title">{project.title}</h2>
+                    <h2 className="title">
+                        <GreyUnderlinedText>
+                            {project.title}
+                        </GreyUnderlinedText>
+                    </h2>
                     <div className="description">{project.description}</div>
                 </div>
             </div>
