@@ -7,7 +7,11 @@ import projects from '../data/projects';
 import '../styles/ProjectOverview.css';
 
 function LoadingCircle() {
-    return <div className="loading-circle"></div>
+    return (
+        <div className="loading-circle-wrapper">
+            <div className="loading-circle"></div>
+        </div>
+    )
 }
 
 function ProjectImage({ project }) {
