@@ -16,6 +16,9 @@
 }
 
 .title-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 70rem;
     text-decoration: none;
 }
 
