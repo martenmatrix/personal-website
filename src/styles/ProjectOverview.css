@@ -27,8 +27,10 @@
     font-family: 'Courier New', monospace;
     display: block;
     font-style: italic;
-    margin: 1em auto;
-    width: max-content;
+    margin: 1em 0;
+    text-align: center;
+    width: 100%;
+    white-space: normal;
 }
 
 @keyframes spinning {
