@@ -10,6 +10,7 @@ import CVGenerator from '../img/cv-generator.gif';
 import MobileMenu from '../img/mobile-menu.gif';
 import MemoryCard from '../img/memory-card.gif';
 import matrixaccsFrontend from '../img/matrixaccs-frontend.gif';
+import personalWebsite from '../img/personal-website.gif';
 
 const projects = [
     {
@@ -136,6 +137,7 @@ const projects = [
         title: 'Personal Website',
         description: 'Template for a slick and lightweight Personal Website, which can easily be customized.',
         id: 'personal-website',
+        titleImage: personalWebsite,
         deploy: 'https://marten.codes',
         git: 'https://github.com/martenmatrix/personal-website',
         readme: 'https://raw.githubusercontent.com/martenmatrix/personal-website/master/README.md',
