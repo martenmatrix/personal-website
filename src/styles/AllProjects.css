@@ -3,6 +3,14 @@
     --border-thickness: 0.25rem;
 }
 
+.all-projects li:hover .grey-underlined-text.activate-hover::after {
+    width: 100%;
+}
+
+.all-projects li:hover .grey-underlined-text::after {
+    transition-duration: 280ms;
+}
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
