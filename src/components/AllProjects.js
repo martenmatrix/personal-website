@@ -49,9 +49,9 @@ function AllProjects() {
             <h1>Projects</h1>
             <ul className="all-projects">
                 {sortedProjects.map((project) => (
-                    <li>
+                    <li key={project.id}>
                         <Link to={project.id}>
-                            <ProjectContainer key={project.id} project={project} />
+                            <ProjectContainer project={project} />
                         </Link>
                     </li>
                     )
