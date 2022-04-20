@@ -14,6 +14,7 @@ import personalWebsite from '../img/personal-website.gif';
 
 const projects = [
     {
+        order: 4,
         title: 'Capital Gains Calculator',
         description: "Calculate your capital gains with the FiFo method with CSV's from Trading212 or Revolut.",
         id: 'fifo-calc',
@@ -23,6 +24,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/capital-gains-trading-calculator/master/README.md',
     },
     {
+        order: '10',
         title: 'Calculator',
         description: 'Simple calculator, which calculates results without the dangerous eval() function.',
         id: 'calculator',
@@ -32,6 +34,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/calculator/main/README.md',
     },
     {
+        order: 3,
         title: 'Weather App',
         description: 'Uses the OpenWeatherMap API to display the current weather for an entered location.',
         id: 'weather-app',
@@ -41,7 +44,8 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/weather-app/main/README.md',
     },
     {
-        title: 'Weather App',
+        order: 5,
+        title: 'Tic Tac Toe',
         description: "Play TicTacToe against a friend or an AI, which uses a backtracking algorithm. Try to beat the AI, you won't.",
         id: 'tic-tac-toe',
         titleImage: ticTacToe,
@@ -50,6 +54,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/tic-tac-toe/main/README.md',
     },
     {
+        order: 2,
         title: 'Shopping Cart',
         description: 'Visit a fake online-store, where the exact state of the page is saved in the URL.',
         id: 'shopping-cart',
@@ -59,6 +64,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/shopping-cart/main/README.md',
     },
     {
+        order: 11,
         title: 'CV Generator',
         description: 'Generate your own Curriculum Vitae.',
         id: 'cv-generator',
@@ -68,6 +74,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/cv-generator/main/README.md',
     },
     {
+        order: 3,
         title: 'Cocktail Mixer',
         description: 'This is the frontend and backend code for a physical Cocktail Mixer machine. A vague build guide is also included.',
         id: 'cocktail-mixer',
@@ -77,6 +84,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/cocktail-mixer/main/README.md',
     },
     {
+        order: 7,
         title: 'Battleship',
         description: 'Play the classic Battleship Game against against a computer, which uses a bit of AI.',
         id: 'battleship',
@@ -86,6 +94,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/battleship/main/README.md'
     },
     {
+        order: 8,
         title: 'Memory Card Game',
         description: "This application puts your memory to the test. You'll have to click each image only one time.",
         id: 'memory-card',
@@ -107,6 +116,7 @@ const projects = [
         hide: true
     },
     {
+        order: 9,
         title: 'ToDo List',
         description: "Create ToDo's, assign them with a priority, date and description or group them.",
         id: 'todo-list',
@@ -116,6 +126,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/todo-list/main/README.md',
     },
     {
+        order: 12,
         title: 'Mobile Menu',
         description: 'Lightweight and customizable mobile menu for the web.',
         id: 'mobile-menu',
@@ -125,6 +136,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/mobile-menu/main/README.md',
     },
     {
+        order: 6,
         title: 'Landing Page for matrixaccs',
         description: 'Landing Page for a business, which sells utilities to help customers secure limited products.',
         id: 'matrixaccs-frontend',
@@ -134,6 +146,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/matrixaccs-frontend-public/master/README.md',
     },
     {
+        order: 1,
         title: 'Personal Website',
         description: 'Template for a slick and lightweight Personal Website, which can easily be customized.',
         id: 'personal-website',
