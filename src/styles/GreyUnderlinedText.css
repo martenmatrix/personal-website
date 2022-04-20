@@ -16,6 +16,10 @@
     transition: width 200ms;
 }
 
-.grey-underlined-text:hover::after {
+.grey-underlined-text:not(.activate-hover)::after{
+    width: 100%;
+}
+
+.grey-underlined-text.activate-hover:hover::after {
     width: 100%;
 }
