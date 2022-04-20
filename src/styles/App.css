@@ -23,6 +23,6 @@ body, html {
     pointer-events: none;
     background: black;
 
-    animation: fade-out 2s;
+    animation: fade-out 1s;
     animation-fill-mode: forwards;
 }
