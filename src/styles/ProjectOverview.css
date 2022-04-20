@@ -42,7 +42,7 @@
 }
 
 .loading-circle {
-    margin: 0 auto;
+    margin: 1em auto;
     border: 0.25rem solid black;
     border-bottom: 0.2rem solid transparent;
     border-radius: 5rem;
