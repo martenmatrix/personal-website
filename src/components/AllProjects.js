@@ -1,4 +1,5 @@
 import Image from './Image';
+import GreyUnderlinedText from './GreyUnderlinedText';
 import projects from '../data/projects';
 import '../styles/AllProjects.css';
 import { Link } from 'react-router-dom';
@@ -46,7 +47,11 @@ function AllProjects() {
 
     return (
         <>
-            <h1>Projects</h1>
+            <h1>
+                <GreyUnderlinedText activateOnHover={false}>
+                    Projects
+                </GreyUnderlinedText>
+            </h1>
             <ul className="all-projects">
                 {sortedProjects.map((project) => (
                     <li key={project.id}>
