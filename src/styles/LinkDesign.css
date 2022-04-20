@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
 
 .link-design {
-    width: min-content;
     font-family: 'Cutive Mono', monospace; /*TODO maybe default font courier instead of cutive mono? */
     font-size: x-large;
     font-weight: bold;
