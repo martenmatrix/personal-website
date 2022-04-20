@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
 
 .link-design {
+    width: min-content;
     font-family: 'Cutive Mono', monospace; /*TODO maybe default font courier instead of cutive mono? */
     font-size: x-large;
     font-weight: bold;
@@ -15,21 +16,4 @@
     color: transparent; /* prevent alt text from showing up */
     top: -0.25em;
     right: -1em;
-}
-
-.link-design::after {
-    content: "";
-    display: block;
-
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 50%;
-    background: black;
-    opacity: 20%;
-    transition: width 200ms;
-}
-
-.link-design:hover::after {
-    width: 100%;
 }

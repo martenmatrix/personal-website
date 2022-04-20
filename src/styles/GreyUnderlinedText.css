@@ -1,0 +1,21 @@
+.grey-underlined-text {
+    position: relative;
+    display: inline;
+}
+
+.grey-underlined-text::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 50%;
+    background: black;
+    opacity: 20%;
+    transition: width 200ms;
+}
+
+.grey-underlined-text:hover::after {
+    width: 100%;
+}
