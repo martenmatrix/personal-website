@@ -32,9 +32,9 @@ function AllProjects() {
 
         if (posA && posB) {
             if (posA > posB) {
-                return -1;
-            } else if (posB > posA) {
                 return 1;
+            } else if (posB > posA) {
+                return -1;
             }
         }
 
