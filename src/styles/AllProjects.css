@@ -20,7 +20,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 2grem;
+    gap: 2rem;
 }
 
 .all-projects li {
