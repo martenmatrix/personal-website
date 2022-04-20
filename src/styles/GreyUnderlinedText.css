@@ -1,3 +1,12 @@
+@keyframes underline {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
 .grey-underlined-text {
     position: relative;
     display: inline;
@@ -17,7 +26,8 @@
 }
 
 .grey-underlined-text:not(.activate-hover)::after{
-    width: 100%;
+    animation: 200ms underline linear 200ms;
+    animation-fill-mode: forwards;
 }
 
 .grey-underlined-text.activate-hover:hover::after {
