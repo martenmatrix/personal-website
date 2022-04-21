@@ -111,6 +111,7 @@ If you want to run the application on your local pc or just want to contribute, 
 	- **rehype-slug** v.5.0.1
 	- **remark-gemoji** v.7.0.1
 	- **remark-gfm** v.3.0.1
+	- **remark-a11y-emoji** v.3.1.0
 
 ## :scroll: License
 [MIT](https://github.com/martenmatrix/personal-website/blob/master/LICENSE)
