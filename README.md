@@ -108,6 +108,7 @@ If you want to run the application on your local pc or just want to contribute, 
 6. If you want to build the site for production. Run `npm run build`. A folder called “build” should get created.
 
 ## :blue_book: Technology Stack
+- **Node.js** v.16.13.1
 - **Create React App** v5.0.0
 - **React Router** v.6.2.1
 - **React Markdown** v.8.0.2
