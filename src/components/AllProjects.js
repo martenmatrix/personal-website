@@ -3,15 +3,39 @@ import GreyUnderlinedText from './GreyUnderlinedText';
 import projects from '../data/projects';
 import '../styles/AllProjects.css';
 import { Link } from 'react-router-dom';
+import { useRef, useState } from 'react';
 
 function ProjectContainer({ project }) {
+        const [objectFit, setObjectFit] = useState('cover');
+
+        const projectContainer = useRef(null);
+
+        function getImageHeightAndWidth() {
+            const imageElement = projectContainer.current.querySelector('img');
+            const { naturalWidth, naturalHeight } = imageElement;
+
+            return {
+                naturalWidth, 
+                naturalHeight
+            }
+        }
+
+        function onImageLoad() {
+            const { naturalWidth, naturalHeight } = getImageHeightAndWidth();
+            const aspectRatioScore = naturalWidth / naturalHeight;
+            
+            if (aspectRatioScore > 3) {
+                setObjectFit('scale-down');
+            };
+        }
+ 
     	return (
-            <div className="project-container">
+            <div className="project-container" ref={projectContainer}>
                 <span className="top border"></span>
                 <span className="right border"></span>
                 <span className="bottom border"></span>
                 <span className="left border"></span>
-                <Image className="image" loading="lazy" src={project.titleImage} />
+                <Image onLoad={onImageLoad} style={{'objectFit': objectFit}} className="image" loading="lazy" src={project.titleImage} />
                 <div className="title-description-wrapper">
                     <h2 className="title">
                         <GreyUnderlinedText>
