@@ -118,6 +118,7 @@ If you want to run the application on your local pc or just want to contribute, 
 	- **remark-gfm** v.3.0.1
 	- **remark-a11y-emoji** v.3.1.0
 - **react-lazy-load-image-component** v.1.5.4
+- **gifsicle-wrapper** v.2.0.2
 
 ## :scroll: License
 [MIT](https://github.com/martenmatrix/personal-website/blob/master/LICENSE)
