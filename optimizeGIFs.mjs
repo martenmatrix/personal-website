@@ -50,11 +50,9 @@ async function optimizeAllImages(replaceImages = false) {
     console.log('✨ Replaced all images with optimized ones')
 }
 
-console.log(argv)
 const replaceImages = argv[2];
-if (replaceImages === '--replace') {
-    console.log('ok')
-    // optimizeAllImages(true)
+if (replaceImages === 'replace') {
+    optimizeAllImages(true)
 } else {
     optimizeAllImages();
 }
