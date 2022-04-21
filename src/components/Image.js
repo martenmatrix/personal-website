@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import '../styles/Image.css';
 
-function Image({ src, alt, className, ...rest}) {
+function Image({ src, alt, className, loading = 'eager', ...rest}) {
     const [hasLoaded, setHasLoaded] = useState(false);
     const classes = `${hasLoaded ? '' : 'loading '}loading-image${className ? ' ' + className : ''}`;
 
     return (
         <div className={classes} {...rest}>
             <div className="loading-animation" aria-hidden="true"></div>
-            <img src={src} alt={alt} onLoad={() => setHasLoaded(true)}/>
+            <img src={src} alt={alt} loading={loading} onLoad={() => setHasLoaded(true)}/>
         </div>
     );
 }

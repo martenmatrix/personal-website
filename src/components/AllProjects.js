@@ -11,7 +11,7 @@ function ProjectContainer({ project }) {
                 <span className="right border"></span>
                 <span className="bottom border"></span>
                 <span className="left border"></span>
-                <Image className="image" src={project.titleImage} />
+                <Image className="image" loading="lazy" src={project.titleImage} />
                 <div className="title-description-wrapper">
                     <h2 className="title">
                         <GreyUnderlinedText>
