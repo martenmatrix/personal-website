@@ -46,7 +46,6 @@
     ]
   },
   "devDependencies": {
-    "gifsicle-wrapper": "^2.0.2",
-    "sass": "^1.50.0"
+    "gifsicle-wrapper": "^2.0.2"
   }
 }
