@@ -81,6 +81,7 @@ If something does not work as expected, please [create an issue](https://github.
 - slick and beautiful design
 - parses your project's README's automatically to HTML, even “markdown” from GitHub
 - error boundary
+- automatically optimize gifs
 - lazy loading of images
 - add as many links as you want
 - showcase as many projects as you want
@@ -98,10 +99,13 @@ If you want to run the application on your local pc or just want to contribute, 
 
 3. If you want to download the `.gif`'s used for the examples, you'll have to [install Git LFS](https://git-lfs.github.com/). After installing it, run `git lfs pull` in the projects directory to pull the images. However, this is only necessary, if you want to display the images of the projects, which are examples.
 
-3. If you want to run the website on your localhost type: 
+4. If you want that your `.gif`'s get optimized, you can run `npm run optimizegif`.
+	> :bulb: By default the optimized images will get outputted to the "optimized" folder, however if you want that your original images get replaced by the optimized ones, run the command with the `--replace` flag.
+
+5. If you want to run the website on your localhost type: 
 	`npm run start`
 
-4. If you want to build the site for production. Run `npm run build`. A folder called “build” should get created.
+6. If you want to build the site for production. Run `npm run build`. A folder called “build” should get created.
 
 ## :blue_book: Technology Stack
 - **Create React App** v5.0.0
