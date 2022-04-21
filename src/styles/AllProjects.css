@@ -113,8 +113,8 @@ h1 {
 }
 
 .project-container .title-description-wrapper {
-    margin: 0.2rem;
-    width: 100%;
+    margin: 0 1%;
+    width: 98%;
     height: 30%;
     display: flex;
     flex-direction: column;
