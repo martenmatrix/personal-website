@@ -50,7 +50,7 @@ h1 {
     height: 100%;
     position: relative;
 
-    border: solid 0.25rem transparent; /* placeholder for animated border */
+    border: solid 0.2rem white; /* placeholder for animated border */
     box-shadow: 5px 5px 10px #00000020;
 }
 
