@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'src/**'
 jobs:
   FTP-Deploy-Action:
     name: FTPS-Deploy-Action
