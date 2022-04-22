@@ -24,11 +24,13 @@
 
 .loading-animation {
     opacity: 0;
+    transform: translateZ(0);
     pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%; /* TODO image is flackering behind loading animation when setting this to 100% even though it is not overflowing, why? */
+                 /* THE BUG IS CAUSED BY THE ANIMATION/BACKGROUND-SIZE */
     height: 100%;
     animation: slide 1s infinite linear;
     background: linear-gradient(-50deg, white 49%, #F6F6F6 49%, #F6F6F6 52%, white 52%);
