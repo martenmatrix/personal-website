@@ -33,7 +33,7 @@ h1 {
 
 .all-projects li {
     display: block;
-    border: solid 0.2rem transparent; /* placeholder for animated border */
+    border: solid 0.25rem black; /* placeholder for animated border */
     width: 90%;
     max-width: 50rem;
     height: 25rem;
