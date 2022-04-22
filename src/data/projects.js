@@ -41,7 +41,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/capital-gains-trading-calculator/master/README.md',
     },
     {
-        order: '10',
+        order: 10,
         title: 'Calculator',
         description: 'Simple calculator, which calculates results without the dangerous eval() function.',
         id: 'calculator',
@@ -52,7 +52,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/calculator/main/README.md',
     },
     {
-        order: 3,
+        order: 1,
         title: 'Weather App',
         description: 'Uses the OpenWeatherMap API to display the current weather for an entered location.',
         id: 'weather-app',
@@ -74,7 +74,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/tic-tac-toe/main/README.md',
     },
     {
-        order: 2,
+        order: 3,
         title: 'Shopping Cart',
         description: 'Visit a fake online-store, where the exact state of the page is saved in the URL.',
         id: 'shopping-cart',
@@ -174,7 +174,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/matrixaccs-frontend-public/master/README.md',
     },
     {
-        order: 1,
+        order: 2,
         title: 'Personal Website',
         description: 'Template for a slick and lightweight Personal Website, which can easily be customized.',
         id: 'personal-website',
