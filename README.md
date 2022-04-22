@@ -51,9 +51,10 @@ The page located at `/projects` displays an overview of your projects and a deta
 		- `id: <string> required`—This is an ID for the project. The link to an overview of the project will later be `projects/<id>`. Make sure it is **unique**.
 		- `title: <string> required` This should contain the title of your project.
 		- `readme: <string|markdown> required`—This should contain a detailed description of your project, it is recommended to use your project's README. The markdown will be showed on the projects overview. You can even use GitHub's Markdown syntax, and it will get parsed correctly.
-		- `titleImage: <string|image> required`—This should contain an image of your project. It will be displayed in its container at the overview of your projects and at its detailed overview.
+		- `titleImage: <string|image> required`—This should contain an image of your project. It will be displayed in its container at the overview of your projects.
 		> :bulb: You are able to pass in a URL to your image or to upload your own like explained below.
 		
+		- `overviewImage: <string|image> required`—This should contain an image of your project. It will be displayed at the project's detailed overview.
 		- `description: <string>`—Add a small description about your project here. This will be displayed in the container of the project at the project's overview site.
 		- `order: <integer>`—This specifies the ranking of the project. A project with a larger number will get displayed before a project with a smaller one.
 		- `git: <string>`—This should contain the link to the project's repository. It is used for the `href` of the link in the bottom right corner of a project's overview.
