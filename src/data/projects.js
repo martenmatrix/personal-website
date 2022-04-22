@@ -167,7 +167,7 @@ const projects = [
         title: 'Landing Page for matrixaccs',
         description: 'Landing Page for a business, which sells utilities to help customers secure limited products.',
         id: 'matrixaccs-frontend',
-        titleImage: fifoCalcPNG,
+        titleImage: matrixaccsFrontendPNG,
         overviewImage: matrixaccsFrontendGIF,
         deploy: 'https://www.matrixaccs.com',
         git: 'https://github.com/martenmatrix/matrixaccs-frontend-public',
