@@ -14,6 +14,8 @@ jobs:
       uses: nschloe/action-cached-lfs-checkout@v1
     - name: Install dependencies
       run: npm ci
+    - name: Optimize pngs
+      run: npm run optimizepngs ${{ secrets.TINIFY_API_KEY }} replace
     - name: Optimize gifs
       run: npm run optimizegifs replace
     - name: Create production bundle
