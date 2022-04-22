@@ -103,7 +103,7 @@ If you want to run the application on your local pc or just want to contribute, 
 4. If you want that your `.gif`'s get optimized, you can run `npm run optimizegifs`.
 	> :bulb: By default the optimized images will get outputted to the "optimized" folder, however if you want that your original images get replaced by the optimized ones, run the command `npm run optimizegifs replace`.
 
-	> :bulb: There is a similar command for optimizing PNGs with the same options: `npm run optimizepngs`.
+	> :bulb: There is a similar command for optimizing PNGs with the same options: `npm run optimizepngs <TinyPNGApiKey> <replace>`. However you'll need a [TinyPNG ApiKey](https://tinypng.com/developers) for this.
 
 5. If you want to run the website on your localhost type: 
 	`npm run start`
