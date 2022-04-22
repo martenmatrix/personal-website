@@ -52,7 +52,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/calculator/main/README.md',
     },
     {
-        order: 1,
+        order: 3,
         title: 'Weather App',
         description: 'Uses the OpenWeatherMap API to display the current weather for an entered location.',
         id: 'weather-app',
@@ -96,7 +96,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/cv-generator/main/README.md',
     },
     {
-        order: 3,
+        order: 1,
         title: 'Cocktail Mixer',
         description: 'This is the frontend and backend code for a physical Cocktail Mixer machine. A vague build guide is also included.',
         id: 'cocktail-mixer',
