@@ -26,14 +26,17 @@ async function optimizeImage(imageData, replaceImage = false) {
     console.log('🔨 Optimizing ' + imageData.name + '...')
 
     let output;
+    let optipngArguments;
     if (replaceImage) {
         output = imageData.path;
+        optipngArguments = ['-o2', imageData.path];
     } else {
         output = path.resolve(path.resolve(__dirname, 'src/img/optimized/', imageData.name));
+        optipngArguments = ['-o2', '-i0', '-out', output, imageData.path]
     }
 
     await new Promise(resolve => {
-        execFile(optipng, ['-out', output, imageData.path], error => resolve());
+        execFile(optipng, optipngArguments, error => resolve());
     });
     console.log('✨ Optimized ' + imageData.name + '...')
 }
