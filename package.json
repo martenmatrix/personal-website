@@ -25,7 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "optimizegifs": "node optimizeGIFs.mjs"
+    "optimizegifs": "node optimizeGIFs.mjs",
+    "optimizepngs": "node optimizePNGs.mjs"
   },
   "eslintConfig": {
     "extends": [
