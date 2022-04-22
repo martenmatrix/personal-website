@@ -32,8 +32,8 @@ async function optimizeImage(imageData, replaceImage = false) {
         output = path.resolve(path.resolve(__dirname, 'src/img/optimized/', imageData.name));
     }
 
-    await execFile(optipng, ['-out', output, imageData.path], error => {
-        console.log('Image minified!');
+    await new Promise(resolve => {
+        execFile(optipng, ['-out', output, imageData.path], error => resolve());
     });
     console.log('✨ Optimized ' + imageData.name + '...')
 }
