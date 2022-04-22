@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "gifsicle-wrapper": "^2.0.2",
-    "optipng-bin": "^8.1.0"
+    "optipng-bin": "^8.1.0",
+    "tinify": "^1.6.1"
   }
 }

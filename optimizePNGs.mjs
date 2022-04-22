@@ -2,6 +2,7 @@ import optipng from 'optipng-bin';
 import { execFile } from 'node:child_process';
 import fs from 'fs';
 import path from 'path';
+import tinify from 'tinify';
 import { fileURLToPath } from 'url';
 import { argv } from 'process';
 
@@ -23,7 +24,7 @@ const getAllPNGsPaths = (folder) => {
 }
 
 async function optimizeImage(imageData, replaceImage = false) {
-    console.log('🔨 Optimizing ' + imageData.name + '...')
+    console.log('🔨 Optimizing ' + imageData.name + 'with optipng...')
 
     let output;
     let optipngArguments;
@@ -38,7 +39,21 @@ async function optimizeImage(imageData, replaceImage = false) {
     await new Promise(resolve => {
         execFile(optipng, optipngArguments, error => resolve());
     });
-    console.log('✨ Optimized ' + imageData.name + '...')
+
+    console.log('✨ Optimized ' + imageData.name + 'with optipng.')
+}
+
+async function optimizeImageTinyPNG(imageData, replaceImage = false) {
+    console.log('🔨 Optimizing ' + imageData.name + 'with tinypng...')
+    let output;
+    if (replaceImage) {
+        output = imageData.path;
+    } else {
+        output = path.resolve(path.resolve(__dirname, 'src/img/optimized/', imageData.name));
+    }
+    const source = tinify.fromFile(imageData.path);
+    console.log('✨ Optimized ' + imageData.name + 'with tinypng.');
+    await source.toFile(output);
 }
 
 async function optimizeAllImages(replaceImages = false) {
@@ -48,14 +63,17 @@ async function optimizeAllImages(replaceImages = false) {
     const allPromises = allUnoptimizedImages.map(async (imageData) => {
         await optimizeImage(imageData, replaceImages);
     });
-
-    console.log('-----------------------------------------------')
-
     await Promise.all(allPromises);
+
+    for (const imageData of allUnoptimizedImages) {
+        await optimizeImageTinyPNG(imageData, replaceImages);
+    }
+
     console.log('✨ Replaced all images with optimized ones')
 }
 
-const replaceImages = argv[2];
+tinify.key = argv[2];
+const replaceImages = argv[3];
 if (replaceImages === 'replace') {
     optimizeAllImages(true)
 } else {
