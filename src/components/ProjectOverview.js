@@ -15,7 +15,7 @@ function LoadingCircle() {
 }
 
 function ProjectImage({ project }) {
-    const projectImageLink = project ? project.project.overviewImage : null;
+    const projectImageLink = project ? project.overviewImage : null;
 
     return (
         <div className="title-image-section">
