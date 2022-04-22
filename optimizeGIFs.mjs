@@ -34,6 +34,8 @@ async function optimizeImage(imageData, replaceImage = false) {
     await gifsicle(imageData.path)
             .optimize({ level: gifsicle.level.O3, lossiness: 199 })
             .toFile(output);
+
+    console.log('✨ Optimized ' + imageData.name + '!')
 }
 
 async function optimizeAllImages(replaceImages = false) {
