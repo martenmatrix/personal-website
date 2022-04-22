@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "gifsicle-wrapper": "^2.0.2"
+    "gifsicle-wrapper": "^2.0.2",
+    "optipng-bin": "^8.1.0"
   }
 }
