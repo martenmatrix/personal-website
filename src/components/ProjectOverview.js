@@ -21,7 +21,7 @@ function ProjectImage({ project }) {
     return (
         <div className="title-image-section">
             <a className="title-image" href={projectImageLink} target="_blank" rel="noreferrer">
-                <Image src={projectImageLink} alt={'Website being used'}/>
+                <Image src={projectImageLink} alt={'Website being used'} loading="lazy"/>
             </a>
             <p className="click-info">Click the image to enlarge</p>
         </div>
