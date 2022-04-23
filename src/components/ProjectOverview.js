@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Header from './Header';
 import LinkDesign from './LinkDesign';
 import Markdown from './GitHubMarkdown';
 import Image from './Image';
@@ -78,8 +79,11 @@ function ProjectOverview() {
         
     }, [project]);
 
+    if (!project) return <p>This project does not exist</p>;
+
     return (
         <div className="project-overview">
+            <Header title={project.title}/>
             <ProjectImage project={project}/>
             <ViewRepository project={project}/>
             {
