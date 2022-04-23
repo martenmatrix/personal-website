@@ -51,6 +51,8 @@ The page located at `/projects` displays an overview of your projects and a deta
 		- `id: <string> required`—This is an ID for the project. The link to an overview of the project will later be `projects/<id>`. Make sure it is **unique**.
 		- `title: <string> required` This should contain the title of your project.
 		- `readme: <string|markdown> required`—This should contain a detailed description of your project, it is recommended to use your project's README. The markdown will be showed on the projects overview. You can even use GitHub's Markdown syntax, and it will get parsed correctly.
+		> :warning: The first heading of the markdown will be removed in favor of the heading you provided at `title`.
+
 		- `titleImage: <string|image> required`—This should contain an image of your project. It will be displayed in its container at the overview of your projects.
 		> :bulb: You are able to pass in a URL to your image or to upload your own like explained below.
 		
