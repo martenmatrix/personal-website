@@ -21,7 +21,7 @@
 
 @supports not (aspect-ratio: 16 / 9) {
     .title-image .loading-image {
-        height: 47.5%;
+        height: 60vh;
     }
 }
 
