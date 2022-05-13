@@ -36,7 +36,7 @@ function ProjectContainer({ project }) {
                 <span className="right border"></span>
                 <span className="bottom border"></span>
                 <span className="left border"></span>
-                <Image onLoad={onImageLoad} style={{'objectFit': objectFit}} className="image" loading="lazy" src={project.titleImage} alt={project.title + 'being used'}/>
+                <Image onLoad={onImageLoad} style={{'objectFit': objectFit}} className="image" loading="lazy" src={project.titleImage} alt={project.title + ' being used'}/>
                 <div className="title-description-wrapper">
                     <h2 className="title">
                         <GreyUnderlinedText>
