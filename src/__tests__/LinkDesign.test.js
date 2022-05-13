@@ -5,7 +5,7 @@ import LinkDesign from '../components/LinkDesign';
 
 jest.mock('react-router-dom', () => ({
     __esModule: true,
-    Link: ({to, children, ...rest}) => (<a href={to} {...rest} data-usesrouter='y'>{children}</a>)
+    Link: ({to, children, ...rest}) => (<a href={to} {...rest} data-usesrouter=''>{children}</a>)
 }));
 
 
