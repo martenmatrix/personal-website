@@ -49,8 +49,8 @@ function ProjectContainer({ project }) {
         );
 }
 
-function AllProjects() {
-    const unhiddenProjects = projects.filter((project) => !project.hide);
+function AllProjects({ showProjects }) {
+    const unhiddenProjects = showProjects.filter((project) => !project.hide);
     const sortedProjects = unhiddenProjects.sort((projectA, projectB) => {
         const posA = projectA.order;
         const posB = projectB.order;
@@ -89,6 +89,10 @@ function AllProjects() {
             </ul>
         </>
     )
+}
+
+AllProjects.defaultProps = {
+    showProjects: projects
 }
 
 export default AllProjects;
