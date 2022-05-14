@@ -8,6 +8,7 @@ jest.mock('react-router-dom', () => ({
 }));
 
 jest.mock('../components/Image.js', () => (
+    // eslint-disable-next-line jsx-a11y/alt-text
     (props) => <img {...props} />
 ));
 
