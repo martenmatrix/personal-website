@@ -1,6 +1,6 @@
 import Image from './Image';
 import GreyUnderlinedText from './GreyUnderlinedText';
-import Header from './Header'
+import Header from './Header';
 import projects from '../data/projects';
 import '../styles/AllProjects.css';
 import { Link } from 'react-router-dom';
