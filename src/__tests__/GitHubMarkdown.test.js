@@ -57,10 +57,11 @@ This contains some GitHub-specific markdown.
 `
 
 test('parses markdown correctly', () => {
-    render((
+    const { container } = render((
     <GitHubMarkdown>
         {markdown}
     </GitHubMarkdown>))
+	
 
-    expect(screen).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
 });
