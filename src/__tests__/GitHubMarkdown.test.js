@@ -61,7 +61,6 @@ test('parses markdown correctly', () => {
     <GitHubMarkdown>
         {markdown}
     </GitHubMarkdown>))
-	
 
     expect(container).toMatchSnapshot();
 });
