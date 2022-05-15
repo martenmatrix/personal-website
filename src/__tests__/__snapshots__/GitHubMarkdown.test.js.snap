@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parses markdown correctly 1`] = `
+<div>
+  <div
+    class="markdown-body"
+  >
+    <h1
+      id="user-content-"
+    />
+    
+
+    <p>
+      This contains some GitHub-specific markdown.
+    </p>
+    
+
+    <h2
+      id="user-content-table-of-contents"
+    >
+      Table of Contents
+    </h2>
+    
+
+    <ul>
+      
+
+      <li>
+        <a
+          href="#grey_exclamation-usage"
+        >
+          Usage
+        </a>
+      </li>
+      
+
+      <li>
+        <a
+          href="#sparkles-features"
+        >
+          Features
+        </a>
+      </li>
+      
+
+    </ul>
+    
+
+    <h2
+      id="user-content-grey_exclamation-usage"
+    >
+      ❕ Usage
+    </h2>
+    
+
+    <p
+      align="center"
+    >
+      
+	
+      <img
+        alt="homepage of frontend with numbers assigned to the sections"
+        src="https://github.com/martenmatrix/cocktail-mixer/blob/main/readme-images/homepage.jpg?raw=true"
+      />
+      
+
+    </p>
+    
+
+    <ol>
+      
+	
+      <li>
+        
+		lorum lorum sorum
+	
+      </li>
+      
+	
+      <li>
+        
+        lorum lorum sorum 2
+	
+      </li>
+      
+	
+      <li>
+        
+		
+        <details>
+          
+			
+          <summary>
+            
+				This will open up the settings. You will be prompted for a password. The default password is 
+            <code>
+              cocktail
+            </code>
+            .
+			
+          </summary>
+          
+			
+          <div>
+            
+				
+            <ol>
+              
+					
+              <p
+                align="center"
+              >
+                
+						
+                <img
+                  alt="two images: static settings site with numbers on the left and animated settings site with action on the right"
+                  src="https://raw.githubusercontent.com/martenmatrix/cocktail-mixer/main/readme-images/static-and-animation-settings.gif"
+                />
+                
+					
+              </p>
+              
+					
+              <li>
+                
+						Add an ingredient and assign it a category. The current categories consist of 
+                <code>
+                  juice
+                </code>
+                , 
+                <code>
+                  softdrink
+                </code>
+                , 
+                <code>
+                  alcohol
+                </code>
+                 and 
+                <code>
+                  unableToPump
+                </code>
+                .
+					
+              </li>
+              
+				
+            </ol>
+            
+			
+          </div>
+          
+		
+        </details>
+        
+	
+      </li>
+      
+
+    </ol>
+    
+
+    <h2
+      id="user-content-sparkles-features"
+    >
+      ✨ Features
+    </h2>
+    
+
+    <ul>
+      
+
+      <li>
+        everyone on your local network can make a drink by visiting the website hosted by the machine in your local network
+      </li>
+      
+
+      <li>
+        automatically mix a drink with the press of a button
+      </li>
+      
+
+    </ul>
+    
+
+    <ol>
+      
+
+      <li>
+        First list item.
+      </li>
+      
+
+      <li>
+        Second one.
+      </li>
+      
+
+    </ol>
+    
+
+    <h2
+      id="user-content-wrench-installation"
+    >
+      🔧 Installation
+    </h2>
+    
+
+    <blockquote>
+      
+
+      <p>
+        ⚠️ The following guide is for Linux distributions.
+      </p>
+      
+
+    </blockquote>
+    
+
+    <ol>
+      
+
+      <li>
+        Clone the repository.
+      </li>
+      
+
+      <li>
+        Navigate into the folder:
+      </li>
+      
+
+    </ol>
+    
+
+    <h4
+      id="user-content-cool-code"
+    >
+      Cool code
+    </h4>
+    
+
+    <p>
+      <code>
+        const cool = (text) =&gt; console.log(text)
+      </code>
+    </p>
+  </div>
+</div>
+`;
