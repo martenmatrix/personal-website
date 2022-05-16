@@ -10,7 +10,7 @@ import '../styles/ProjectOverview.css';
 function LoadingCircle() {
     return (
         <div className="loading-circle-wrapper">
-            <div className="loading-circle"></div>
+            <div className="loading-circle" role="alert" aria-busy="true"></div>
         </div>
     )
 }
