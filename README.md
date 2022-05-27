@@ -127,6 +127,10 @@ If you want to run the application on your local pc or just want to contribute, 
 - **react-lazy-load-image-component** v.1.5.4
 - **gifsicle-wrapper** v.2.0.2
 - **tinify** v.1.6.1
+- **Jest** v.28.1.0
+- **React Testing Library** v.13.2.0
+	- **@testing-library/jest-dom** v.5.16.4
+	- **@testing-library/user-event** v.14.2.0
 
 ## :scroll: License
 [MIT](https://github.com/martenmatrix/personal-website/blob/master/LICENSE)
