@@ -50,6 +50,7 @@ const projects = [
         deploy: 'https://martenmatrix.github.io/calculator/',
         git: 'https://github.com/martenmatrix/calculator/',
         readme: 'https://raw.githubusercontent.com/martenmatrix/calculator/main/README.md',
+        hide: true,
     },
     {
         order: 3,
@@ -72,6 +73,7 @@ const projects = [
         deploy: 'https://martenmatrix.github.io/tic-tac-toe/',
         git: 'https://github.com/martenmatrix/tic-tac-toe',
         readme: 'https://raw.githubusercontent.com/martenmatrix/tic-tac-toe/main/README.md',
+        hide: true,
     },
     {
         order: 3,
@@ -94,6 +96,7 @@ const projects = [
         deploy: 'https://martenmatrix.github.io/cv-generator/',
         git: 'https://github.com/martenmatrix/cv-generator',
         readme: 'https://raw.githubusercontent.com/martenmatrix/cv-generator/main/README.md',
+        hide: true,
     },
     {
         order: 1,
@@ -115,7 +118,8 @@ const projects = [
         overviewImage: battleshipGIF,
         deploy: 'https://martenmatrix.github.io/odin-battleship/',
         git: 'https://github.com/martenmatrix/odin-battleship',
-        readme: 'https://raw.githubusercontent.com/martenmatrix/battleship/main/README.md'
+        readme: 'https://raw.githubusercontent.com/martenmatrix/battleship/main/README.md',
+        hide: true,
     },
     {
         order: 8,
@@ -150,6 +154,7 @@ const projects = [
         deploy: 'https://martenmatrix.github.io/todo-list/',
         git: 'https://github.com/martenmatrix/todo-list',
         readme: 'https://raw.githubusercontent.com/martenmatrix/todo-list/main/README.md',
+        hide: true,
     },
     {
         order: 12,
@@ -161,6 +166,7 @@ const projects = [
         deploy: 'https://martenmatrix.github.io/mobile-menu/',
         git: 'https://github.com/martenmatrix/mobile-menu',
         readme: 'https://raw.githubusercontent.com/martenmatrix/mobile-menu/main/README.md',
+        hide: true,
     },
     {
         order: 6,
