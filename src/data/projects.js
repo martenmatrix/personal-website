@@ -12,6 +12,7 @@ import MobileMenuGIF from '../img/mobile-menu.gif';
 import MemoryCardGIF from '../img/memory-card.gif';
 import matrixaccsFrontendGIF from '../img/matrixaccs-frontend.gif';
 import personalWebsiteGIF from '../img/personal-website.gif';
+import tikTokCloneGIF from '../img/tiktok-clone.gif';
 
 // PNG
 import fifoCalcPNG from '../img/fifo-calc.png';
@@ -27,6 +28,7 @@ import MobileMenuPNG from '../img/mobile-menu.png';
 import MemoryCardPNG from '../img/memory-card.png';
 import matrixaccsFrontendPNG from '../img/matrixaccs-frontend.png';
 import personalWebsitePNG from '../img/personal-website.png';
+import tikTokClonePNG from '../img/tiktok-clone.png';
 
 const projects = [
     {
@@ -189,6 +191,17 @@ const projects = [
         deploy: 'https://marten.codes',
         git: 'https://github.com/martenmatrix/personal-website',
         readme: 'https://raw.githubusercontent.com/martenmatrix/personal-website/master/README.md',
+    },
+    {
+        order: 2,
+        title: 'TikTok Clone',
+        description: 'Replicates the functionality of a social media platform named TikTok',
+        id: 'tiktok-clone',
+        titleImage: tikTokClonePNG,
+        overviewImage: tikTokCloneGIF,
+        deploy: 'https://tiktok-clone-123456789.web.app/',
+        git: 'https://github.com/martenmatrix/tiktok-clone',
+        readme: 'https://raw.githubusercontent.com/martenmatrix/tiktok-clone/main/README.md',
     }
     // maybe python codebases, however there is some confidential information in it, make sure to delete the file from the complete history
 ]
