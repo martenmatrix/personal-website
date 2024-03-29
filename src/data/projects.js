@@ -29,6 +29,7 @@ import MemoryCardPNG from '../img/memory-card.png';
 import matrixaccsFrontendPNG from '../img/matrixaccs-frontend.png';
 import personalWebsitePNG from '../img/personal-website.png';
 import tikTokClonePNG from '../img/tiktok-clone.png';
+import stineApiPNG from '../img/stine_logo.png';
 
 const projects = [
     {
@@ -87,6 +88,7 @@ const projects = [
         deploy: 'https://martenmatrix.github.io/shopping-cart/',
         git: 'https://github.com/martenmatrix/shopping-cart',
         readme: 'https://raw.githubusercontent.com/martenmatrix/shopping-cart/main/README.md',
+        hide: true
     },
     {
         order: 11,
@@ -133,6 +135,7 @@ const projects = [
         deploy: 'https://martenmatrix.github.io/memory-card/',
         git: 'https://github.com/martenmatrix/odin-memory-card',
         readme: 'https://raw.githubusercontent.com/martenmatrix/memory-card/main/README.md',
+        hide: true
     },
     {
         id: 'javascript-form',
@@ -202,6 +205,17 @@ const projects = [
         deploy: 'https://tiktok-clone-123456789.web.app/',
         git: 'https://github.com/martenmatrix/tiktok-clone',
         readme: 'https://raw.githubusercontent.com/martenmatrix/tiktok-clone/main/README.md',
+    },
+    {
+        order: 1,
+        title: 'STiNE API',
+        description: 'A library to interact with our university website without using browser automation.',
+        id: 'stine-api',
+        titleImage: stineApiPNG,
+        overviewImage: stineApiPNG,
+        git: 'https://github.com/martenmatrix/stine-api',
+        readme: 'https://raw.githubusercontent.com/martenmatrix/stine-api/main/README.md'
+
     }
     // maybe python codebases, however there is some confidential information in it, make sure to delete the file from the complete history
 ]
