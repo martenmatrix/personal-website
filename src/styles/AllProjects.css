@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
 :root {
     --border-thickness: 0.25rem;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .all-projects li:hover .grey-underlined-text.activate-hover::after {
