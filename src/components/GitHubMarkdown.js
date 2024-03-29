@@ -6,8 +6,8 @@ import addIdToHeadings from 'rehype-slug';
 import sanitizeHTML from 'rehype-sanitize';
 import parseHTML from 'rehype-raw';
 import removeHeading from 'remark-first-heading';
+import { visit } from 'unist-util-visit';
 import '../styles/github-markdown-light.css';
-
 function fixBrokenLinks() {
     // This code is from the documentation of rehype-sanitize: https://github.com/rehypejs/rehype-sanitize#example
 
@@ -61,9 +61,19 @@ function fixBrokenLinks() {
 }
 fixBrokenLinks();
 
+// Custom rehype plugin to remove <img> tags
+function rehypeRemoveImages() {
+  return (tree) => {
+    visit(tree, { tagName: 'img' }, (node, index, parent) => {
+      if (parent) {
+        parent.children.splice(index, 1);
+      }
+    });
+  };
+}
 function GitHubMarkdown({ children }) {
     // Remark plugins to transform emojis is passed into rehypePlugins array => ids need to be created before github emojis are parsed, otherwise toc will not work
-    return <ReactMarkdown className="markdown-body" remarkPlugins={[supportGFM, makeEmojisAccessible, [removeHeading, {heading: ''}]]} rehypePlugins={[addIdToHeadings, parseGitHubEmojis, parseHTML, sanitizeHTML]}>{children}</ReactMarkdown>
+    return <ReactMarkdown className="markdown-body" remarkPlugins={[supportGFM, makeEmojisAccessible, [removeHeading, {heading: ''}]]} rehypePlugins={[addIdToHeadings, parseGitHubEmojis, parseHTML, rehypeRemoveImages, sanitizeHTML]}>{children}</ReactMarkdown>
 }
 
 export default GitHubMarkdown;
