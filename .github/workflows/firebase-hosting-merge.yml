@@ -18,7 +18,6 @@ jobs:
         run: npm run optimizepngs ${{ secrets.TINIFY_API_KEY }} replace
       - name: Optimize gifs
         run: npm run optimizegifs replace
-      - uses: actions/checkout@v4
       - name: Create production bundle
         run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
