@@ -61,16 +61,6 @@ function fixBrokenLinks() {
 }
 fixBrokenLinks();
 
-// Custom rehype plugin to remove <img> tags
-function rehypeRemoveImages() {
-  return (tree) => {
-    visit(tree, { tagName: 'img' }, (node, index, parent) => {
-      if (parent) {
-        parent.children.splice(index, 1);
-      }
-    });
-  };
-}
 function GitHubMarkdown({ children }) {
     // Remark plugins to transform emojis is passed into rehypePlugins array => ids need to be created before github emojis are parsed, otherwise toc will not work
     return <ReactMarkdown className="markdown-body" remarkPlugins={[supportGFM, makeEmojisAccessible, [removeHeading, {heading: ''}]]} rehypePlugins={[addIdToHeadings, parseGitHubEmojis, parseHTML, sanitizeHTML]}>{children}</ReactMarkdown>
