@@ -13,6 +13,7 @@ import MemoryCardGIF from '../img/memory-card.gif';
 import matrixaccsFrontendGIF from '../img/matrixaccs-frontend.gif';
 import personalWebsiteGIF from '../img/personal-website.gif';
 import tikTokCloneGIF from '../img/tiktok-clone.gif';
+import unleashGIF from '../img/unleash.gif';
 
 // PNG
 import fifoCalcPNG from '../img/fifo-calc.png';
@@ -30,10 +31,11 @@ import matrixaccsFrontendPNG from '../img/matrixaccs-frontend.png';
 import personalWebsitePNG from '../img/personal-website.png';
 import tikTokClonePNG from '../img/tiktok-clone.png';
 import stineApiPNG from '../img/stine_logo.png';
+import unleashPNG from '../img/unleash.png';
 
 const projects = [
     {
-        order: 4,
+        order: 5,
         title: 'Capital Gains Calculator',
         description: "Calculate your capital gains with the FiFo method with CSV's from Trading212 or Revolut.",
         id: 'fifo-calc',
@@ -56,7 +58,7 @@ const projects = [
         hide: true,
     },
     {
-        order: 3,
+        order: 6,
         title: 'Weather App',
         description: 'Uses the OpenWeatherMap API to display the current weather for an entered location.',
         id: 'weather-app',
@@ -185,7 +187,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/matrixaccs-frontend-public/master/README.md',
     },
     {
-        order: 2,
+        order: 5,
         title: 'Personal Website',
         description: 'Template for a slick and lightweight Personal Website, which can easily be customized.',
         id: 'personal-website',
@@ -196,7 +198,7 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/personal-website/master/README.md',
     },
     {
-        order: 2,
+        order: 4,
         title: 'TikTok Clone',
         description: 'Replicates the functionality of a social media platform named TikTok',
         id: 'tiktok-clone',
@@ -207,7 +209,18 @@ const projects = [
         readme: 'https://raw.githubusercontent.com/martenmatrix/tiktok-clone/main/README.md',
     },
     {
-        order: 1,
+        order: 2,
+        title: 'Unleash',
+        description: 'Easily customize YouTube to remove distractions, which results in less screen time.',
+        id: 'unleash',
+        titleImage: unleashPNG,
+        overviewImage: unleashGIF,
+        git: 'https://github.com/martenmatrix/youtube-distraction-remover-showcase',
+        readme: 'https://raw.githubusercontent.com/martenmatrix/youtube-distraction-remover-showcase/main/README.md'
+
+    },
+    {
+        order: 3,
         title: 'STiNE API',
         description: 'A library to interact with our university website without using browser automation.',
         id: 'stine-api',
