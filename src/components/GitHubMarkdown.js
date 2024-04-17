@@ -73,7 +73,7 @@ function rehypeRemoveImages() {
 }
 function GitHubMarkdown({ children }) {
     // Remark plugins to transform emojis is passed into rehypePlugins array => ids need to be created before github emojis are parsed, otherwise toc will not work
-    return <ReactMarkdown className="markdown-body" remarkPlugins={[supportGFM, makeEmojisAccessible, [removeHeading, {heading: ''}]]} rehypePlugins={[addIdToHeadings, parseGitHubEmojis, parseHTML, rehypeRemoveImages, sanitizeHTML]}>{children}</ReactMarkdown>
+    return <ReactMarkdown className="markdown-body" remarkPlugins={[supportGFM, makeEmojisAccessible, [removeHeading, {heading: ''}]]} rehypePlugins={[addIdToHeadings, parseGitHubEmojis, parseHTML, sanitizeHTML]}>{children}</ReactMarkdown>
 }
 
 export default GitHubMarkdown;
