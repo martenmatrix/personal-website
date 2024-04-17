@@ -6,7 +6,6 @@ import addIdToHeadings from 'rehype-slug';
 import sanitizeHTML from 'rehype-sanitize';
 import parseHTML from 'rehype-raw';
 import removeHeading from 'remark-first-heading';
-import { visit } from 'unist-util-visit';
 import '../styles/github-markdown-light.css';
 function fixBrokenLinks() {
     // This code is from the documentation of rehype-sanitize: https://github.com/rehypejs/rehype-sanitize#example
