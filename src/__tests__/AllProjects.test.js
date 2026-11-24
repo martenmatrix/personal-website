@@ -7,11 +7,6 @@ jest.mock('react-router-dom', () => ({
     Link: ({to, children, ...rest}) => (<a data-inputhref={to} href={to} {...rest} data-usesrouter=''>{children}</a>)
 }));
 
-jest.mock('../components/Image.js', () => (
-    // eslint-disable-next-line jsx-a11y/alt-text
-    (props) => <img {...props} />
-));
-
 jest.mock('../data/projects.js', () => [
     {
         order: 1,
@@ -38,28 +33,28 @@ jest.mock('../data/projects.js', () => [
     }
 ]);
 
-test('sets src attribute to titleImage value and loading attribute to lazy', () => {
+test('shows the Projects heading above the list of links', () => {
     render(<AllProjects />);
-    const imageOfProject = screen.getByAltText(/a cool project 1 being used/i);
+    const heading = screen.getByRole('heading', { level: 1, name: 'Projects' });
+    const links = screen.getByRole('navigation', { name: 'Projects' });
 
-    expect(imageOfProject).toHaveAttribute('src', 'https://example.org');
-    expect(imageOfProject).toHaveAttribute('loading', 'lazy');
+    expect(heading.nextElementSibling).toBe(links);
 });
 
 test('projects are sorted by order attribute (number bigger = higher ranked)', () => {
     render(<AllProjects />);
-    const headings = screen.getAllByRole('heading', { level: 2 });
+    const links = screen.getAllByRole('link');
 
-    const headingsTextContent = headings.map((heading) => heading.textContent);
-    
-    expect(headingsTextContent).toEqual(['a cool project 1', 'a cool project 2']);
+    const titles = links.map((link) => link.textContent);
+
+    expect(titles).toEqual(['a cool project 1', 'a cool project 2']);
 });
 
 test('does not display projects with a hide property', () => {
     render(<AllProjects />);
-    const notExistingProjectHeading = screen.queryByRole('heading', { name: 'a cool hidden project', level: 2 });
+    const hiddenProjectLink = screen.queryByRole('link', { name: 'a cool hidden project' });
 
-    expect(notExistingProjectHeading).toBe(null);
+    expect(hiddenProjectLink).not.toBeInTheDocument();
 });
 
 test('links to the projects id', () => {
@@ -69,31 +64,4 @@ test('links to the projects id', () => {
     const hrefs = links.map((link) => link.dataset.inputhref);
 
     expect(hrefs).toEqual(['id5', 'id1']);
-});
-
-test('displays project title', async () => {
-    render(<AllProjects showProjects={[{
-        order: 1,
-        title: 'a cool project 2',
-        description: 'cool description',
-        id: 'id1',
-        titleImage: 'https://example.org',
-        hide: false
-    }]} />);
-    const title = screen.getByRole('heading', { level: 2, name: 'a cool project 2'});
-
-    expect(title.textContent).toBe('a cool project 2');
-});
-
-test('display projects description', () => {
-    render(<AllProjects showProjects={[{
-        order: 1,
-        title: 'a cool project 2',
-        description: 'cool description',
-        id: 'id1',
-        titleImage: 'https://example.org',
-        hide: false
-    }]} />);
-
-    screen.getByText('cool description');
 });

@@ -1,0 +1,36 @@
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.link-page {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+}
+
+.link-page h1 {
+    align-self: start;
+}
+
+.link-page nav {
+    justify-self: center;
+    padding: 1rem 1.5rem;
+}
+
+.links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.links li {
+    opacity: 0;
+    transform: translateY(25%);
+
+    animation: fade-in ease-in 200ms;
+    animation-fill-mode: forwards;
+}

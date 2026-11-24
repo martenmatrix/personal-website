@@ -5,8 +5,8 @@ import Homepage from '../components/Homepage';
 jest.mock('../data/links', () =>
     [
         { title: 'link', href: 'https://example.org' },
-        { title: 'link', href: 'https://example.org', newTab: false },
-        { title: 'link', href: 'https://example.org', newTab: true },
+        { title: 'link', href: 'https://example.net', newTab: false },
+        { title: 'link', href: 'https://example.com', newTab: true },
     ]
 );
 
@@ -21,6 +21,14 @@ test('animation delay increases 200ms for every link', () => {
     expect(navigationLinks[0]).toHaveStyle('animation-delay: 0ms');
     expect(navigationLinks[1]).toHaveStyle('animation-delay: 200ms');
     expect(navigationLinks[2]).toHaveStyle('animation-delay: 400ms');
+});
+
+test('shows Marten Bitterling above the navigation', () => {
+    render(<Homepage />);
+    const heading = screen.getByRole('heading', { level: 1, name: 'Marten Bitterling' });
+    const links = screen.getByRole('navigation', { name: 'Marten Bitterling' });
+
+    expect(heading.nextElementSibling).toBe(links);
 });
 
 test('title is displayed as child of anchor tag', () => {
