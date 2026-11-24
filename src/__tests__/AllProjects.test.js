@@ -10,7 +10,7 @@ jest.mock('react-router-dom', () => ({
 jest.mock('../data/projects.js', () => [
     {
         order: 1,
-        title: 'a cool project 2',
+        title: 'A Cool Project 2',
         description: 'cool description',
         id: 'id1',
         titleImage: 'https://example.org',
@@ -26,22 +26,22 @@ jest.mock('../data/projects.js', () => [
     },
     {
         order: -200,
-        title: 'a cool project 1',
+        title: 'A Cool Project 1',
         description: 'cool description',
         id: 'id5',
         titleImage: 'https://example.org',
     }
 ]);
 
-test('shows the Projects heading above the list of links', () => {
+test('shows the lowercase projects heading above the list of links', () => {
     render(<AllProjects />);
-    const heading = screen.getByRole('heading', { level: 1, name: 'Projects' });
-    const links = screen.getByRole('navigation', { name: 'Projects' });
+    const heading = screen.getByRole('heading', { level: 1, name: 'projects' });
+    const links = screen.getByRole('navigation', { name: 'projects' });
 
     expect(heading.nextElementSibling).toBe(links);
 });
 
-test('projects are sorted by order attribute (number bigger = higher ranked)', () => {
+test('projects are shown in lowercase and sorted by order', () => {
     render(<AllProjects />);
     const links = screen.getAllByRole('link');
 

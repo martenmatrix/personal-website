@@ -1,9 +1,6 @@
 @keyframes underline {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
+    to {
+        background-size: 100% 50%;
     }
 }
 
@@ -12,7 +9,7 @@
     display: inline;
 }
 
-.grey-underlined-text::after {
+.grey-underlined-text.activate-hover::after {
     content: "";
     display: block;
 
@@ -25,9 +22,11 @@
     transition: width 200ms;
 }
 
-.grey-underlined-text:not(.activate-hover)::after{
-    animation: 200ms underline linear 200ms;
-    animation-fill-mode: forwards;
+.grey-underlined-text:not(.activate-hover) {
+    /* Slice one underline across the text fragments when the heading wraps. */
+    box-decoration-break: slice;
+    background: linear-gradient(#0003, #0003) left bottom / 0 50% no-repeat;
+    animation: underline 200ms linear 200ms forwards;
 }
 
 .grey-underlined-text.activate-hover:hover::after {

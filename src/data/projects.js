@@ -44,6 +44,7 @@ const projects = [
         deploy: 'https://trading-csv-fifo-calculator.web.app/',
         git: 'https://github.com/martenmatrix/capital-gains-trading-calculator',
         readme: 'https://raw.githubusercontent.com/martenmatrix/capital-gains-trading-calculator/master/README.md',
+        hide: true,
     },
     {
         order: 10,
@@ -67,6 +68,7 @@ const projects = [
         deploy: 'https://martenmatrix.github.io/weather-app/',
         git: 'https://github.com/martenmatrix/weather-app/',
         readme: 'https://raw.githubusercontent.com/martenmatrix/weather-app/main/README.md',
+        hide: true,
     },
     {
         order: 5,
@@ -185,6 +187,7 @@ const projects = [
         deploy: 'https://www.matrixaccs.com',
         git: 'https://github.com/martenmatrix/matrixaccs-frontend-public',
         readme: 'https://raw.githubusercontent.com/martenmatrix/matrixaccs-frontend-public/master/README.md',
+        hide: true,
     },
     {
         order: 5,
@@ -196,6 +199,7 @@ const projects = [
         deploy: 'https://marten.codes',
         git: 'https://github.com/martenmatrix/personal-website',
         readme: 'https://raw.githubusercontent.com/martenmatrix/personal-website/master/README.md',
+        hide: true,
     },
     {
         order: 4,

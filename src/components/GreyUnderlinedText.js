@@ -4,9 +4,9 @@ function GreyUnderlinedText({ activateOnHover = true, className, children, ...re
     const classes = `grey-underlined-text${className ? ' ' + className : ''}${activateOnHover ? ' activate-hover' : ''}`
     
     return (
-        <div className={classes} {...rest}>
+        <span className={classes} {...rest}>
             {children}
-        </div>
+        </span>
     )
 }
 

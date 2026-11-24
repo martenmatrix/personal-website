@@ -28,10 +28,10 @@ function AllProjects({ showProjects }) {
 
     const projectLinks = sortedProjects.map(({ id, title }) => ({
         href: id,
-        title,
+        title: title.toLowerCase(),
     }));
 
-    return <LinkPage title="Projects" links={projectLinks} />;
+    return <LinkPage title="projects" links={projectLinks} />;
 }
 
 AllProjects.defaultProps = {
