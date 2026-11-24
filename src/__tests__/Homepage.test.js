@@ -23,10 +23,10 @@ test('animation delay increases 200ms for every link', () => {
     expect(navigationLinks[2]).toHaveStyle('animation-delay: 400ms');
 });
 
-test('shows Marten Bitterling above the navigation', () => {
+test('shows marten bitterling above the navigation', () => {
     render(<Homepage />);
-    const heading = screen.getByRole('heading', { level: 1, name: 'Marten Bitterling' });
-    const links = screen.getByRole('navigation', { name: 'Marten Bitterling' });
+    const heading = screen.getByRole('heading', { level: 1, name: 'marten bitterling' });
+    const links = screen.getByRole('navigation', { name: 'marten bitterling' });
 
     expect(heading.nextElementSibling).toBe(links);
 });
